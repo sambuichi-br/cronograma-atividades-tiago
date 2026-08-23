@@ -441,13 +441,6 @@
     font-size:12px;
     color:var(--ink-soft);
   }
-  .repo-footer a{
-    color:var(--ink-soft);
-    text-decoration:underline;
-    text-decoration-color:var(--paper-line);
-    text-underline-offset:2px;
-  }
-  .repo-footer a:hover{ color:var(--ink); }
 
   @media (max-width:560px){
     h1{ font-size:36px; }
@@ -473,7 +466,6 @@
       <span><b>Aluno:</b> —</span>
       <span><b>Turma:</b> —</span>
       <span><b>Professora:</b> —</span>
-      <span><b>Período:</b> —</span>
     </div>
   </header>
 
@@ -582,10 +574,10 @@
         timeZone: 'America/Sao_Paulo'
       }).format(new Date(repoInfo.pushed_at));
 
-      lastUpdateEl.innerHTML = `Última atualização (último push no GitHub): <strong>${formatted}</strong> · <a href="https://github.com/${REPO_OWNER}/${REPO_NAME}" target="_blank" rel="noopener">ver repositório</a>`;
+      lastUpdateEl.textContent = `Última atualização: ${formatted}`;
     }catch(err){
       console.warn('Não foi possível obter a data do último push no GitHub.', err);
-      lastUpdateEl.innerHTML = `Não foi possível carregar a data da última atualização agora · <a href="https://github.com/${REPO_OWNER}/${REPO_NAME}" target="_blank" rel="noopener">ver repositório</a>`;
+      lastUpdateEl.textContent = 'Não foi possível carregar a data da última atualização.';
     }
   }
   loadLastPushInfo();
@@ -612,7 +604,6 @@
     <span><b>Aluno:</b> ${escapeHtml(data.aluno||'—')}</span>
     <span><b>Turma:</b> ${escapeHtml(data.ano||'—')}</span>
     <span><b>Professora:</b> ${escapeHtml(data.professora||'—')}</span>
-    <span><b>Período:</b> ${escapeHtml(data.periodo||'—')}</span>
   `;
 
   // ---- Chips de categoria ----
