@@ -432,6 +432,23 @@
   .undo-btn:hover{ background:rgba(255,255,255,0.26); }
   .undo-btn:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
 
+  /* ---------- Rodapé ---------- */
+  .repo-footer{
+    text-align:center;
+    margin: 22px 4px 0;
+    padding-top:14px;
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .repo-footer a{
+    color:var(--ink-soft);
+    text-decoration:underline;
+    text-decoration-color:var(--paper-line);
+    text-underline-offset:2px;
+  }
+  .repo-footer a:hover{ color:var(--ink); }
+
   @media (max-width:560px){
     h1{ font-size:36px; }
     header.cover{ padding: 26px 18px 22px 46px; }
@@ -475,6 +492,10 @@
   </div>
 
   <div id="listContainer"></div>
+
+  <footer class="repo-footer">
+    <span id="lastUpdateNote">Consultando a última atualização no GitHub…</span>
+  </footer>
 
 </div>
 
@@ -540,6 +561,34 @@
   const pendingTimers = new Map(); // itemId -> { waitTimer, fadeTimer }
   const toastTimers = new Map();   // itemId -> { el, timeout }
   const toastContainer = document.getElementById('toastContainer');
+
+  // ---- Rodapé: data/hora do último push no repositório GitHub ----
+  const REPO_OWNER = 'sambuichi-br';
+  const REPO_NAME = 'cronograma-atividades-tiago';
+  const lastUpdateEl = document.getElementById('lastUpdateNote');
+
+  async function loadLastPushInfo(){
+    try{
+      const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`, {
+        headers: { 'Accept': 'application/vnd.github+json' }
+      });
+      if(!res.ok) throw new Error('HTTP ' + res.status);
+      const repoInfo = await res.json();
+      if(!repoInfo.pushed_at) throw new Error('Campo pushed_at ausente na resposta da API');
+
+      const formatted = new Intl.DateTimeFormat('pt-BR', {
+        dateStyle: 'long',
+        timeStyle: 'short',
+        timeZone: 'America/Sao_Paulo'
+      }).format(new Date(repoInfo.pushed_at));
+
+      lastUpdateEl.innerHTML = `Última atualização (último push no GitHub): <strong>${formatted}</strong> · <a href="https://github.com/${REPO_OWNER}/${REPO_NAME}" target="_blank" rel="noopener">ver repositório</a>`;
+    }catch(err){
+      console.warn('Não foi possível obter a data do último push no GitHub.', err);
+      lastUpdateEl.innerHTML = `Não foi possível carregar a data da última atualização agora · <a href="https://github.com/${REPO_OWNER}/${REPO_NAME}" target="_blank" rel="noopener">ver repositório</a>`;
+    }
+  }
+  loadLastPushInfo();
 
   let data = null;
   try{
