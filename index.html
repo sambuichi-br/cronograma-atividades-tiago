@@ -141,10 +141,45 @@
     outline:2px solid var(--cat-licao);
     outline-offset:1px;
   }
+  .filter-toggle{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:var(--ink-soft);
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    padding:2px 0;
+    transition: color .15s ease;
+    user-select:none;
+  }
+  .filter-toggle:hover{ color:var(--ink); }
+  .filter-toggle .arrow{
+    display:inline-block;
+    transition: transform .2s ease;
+    font-size:10px;
+  }
+  .filter-toggle[aria-expanded="true"] .arrow{
+    transform: rotate(90deg);
+  }
   .chip-row{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
+    overflow:hidden;
+    max-height:0;
+    opacity:0;
+    transition: max-height .3s ease, opacity .25s ease, margin .3s ease;
+    margin-top:0;
+  }
+  .chip-row.expanded{
+    max-height:200px;
+    opacity:1;
+    margin-top:4px;
   }
   .chip{
     font-family:'Space Mono', monospace;
@@ -480,6 +515,10 @@
     <div class="search-row">
       <input type="search" id="searchInput" placeholder="Buscar por disciplina, data ou palavra-chave...">
     </div>
+    <button type="button" class="filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="categoryChips">
+      <span class="arrow">▶</span>
+      <span>Filtrar por categoria</span>
+    </button>
     <div class="chip-row" id="categoryChips"></div>
     <div class="toggle-row">
       <label class="hide-done-toggle">
@@ -521,6 +560,7 @@
 
   const LS_DONE_KEY = 'cronograma-tiago:concluidas';
   const LS_HIDE_KEY = 'cronograma-tiago:ocultar-concluidas';
+  const LS_FILTERS_KEY = 'cronograma-tiago:filtros-expandidos';
   let storageAvailable = true;
 
   function loadDoneIds(){
@@ -551,6 +591,18 @@
   function saveHidePref(val){
     try{
       localStorage.setItem(LS_HIDE_KEY, val ? '1' : '0');
+    }catch(err){ /* ignore */ }
+  }
+  function loadFiltersPref(){
+    try{
+      return localStorage.getItem(LS_FILTERS_KEY) === '1';
+    }catch(err){
+      return false;
+    }
+  }
+  function saveFiltersPref(val){
+    try{
+      localStorage.setItem(LS_FILTERS_KEY, val ? '1' : '0');
     }catch(err){ /* ignore */ }
   }
 
@@ -621,6 +673,20 @@
     query: "",
     hideDone: loadHidePref(true)
   };
+
+  const filterToggle = document.getElementById('filterToggle');
+  const chipRowEl = document.getElementById('categoryChips');
+  let filtersExpanded = loadFiltersPref();
+  function applyFilterExpanded(){
+    filterToggle.setAttribute('aria-expanded', filtersExpanded ? 'true' : 'false');
+    chipRowEl.classList.toggle('expanded', filtersExpanded);
+  }
+  applyFilterExpanded();
+  filterToggle.addEventListener('click', () => {
+    filtersExpanded = !filtersExpanded;
+    saveFiltersPref(filtersExpanded);
+    applyFilterExpanded();
+  });
 
   const hideDoneToggle = document.getElementById('hideDoneToggle');
   hideDoneToggle.checked = state.hideDone;
@@ -837,7 +903,7 @@
     toast.dataset.toastId = a._id;
     const label = a.titulo ? a.titulo : `${a.disciplina} — ${a.categoria}`;
     toast.innerHTML = `
-      <span class="undo-toast-text">"${escapeHtml(label)}" marcada como concluída.</span>
+      <span class="undo-toast-text">“${escapeHtml(label)}” marcada como concluída.</span>
       <button type="button" class="undo-btn">Desfazer</button>
     `;
     toast.querySelector('.undo-btn').addEventListener('click', () => undoItem(a._id));
