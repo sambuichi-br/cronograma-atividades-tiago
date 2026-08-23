@@ -267,11 +267,23 @@
     align-items:start;
     padding: 14px 4px;
     border-bottom: 1.5px dashed var(--paper-line);
+    max-height:400px;
+    overflow:hidden;
+    transition: opacity .38s ease, max-height .42s ease, padding .42s ease, border-color .42s ease, margin .42s ease;
   }
   .item:last-child{ border-bottom:none; }
 
   .item.is-done{ opacity:.5; }
   .item.is-done .item-title, .item.is-done .item-desc{ text-decoration: line-through; text-decoration-color: var(--done-check); }
+
+  .item.row-fade-out{
+    opacity:0;
+    max-height:0;
+    padding-top:0;
+    padding-bottom:0;
+    margin:0;
+    border-bottom-color:transparent;
+  }
 
   .check{
     appearance:none;
@@ -364,6 +376,62 @@
     font-size:15px;
   }
 
+  /* ---------- Ribbon de desfazer ---------- */
+  .toast-container{
+    position:fixed;
+    left:0; right:0; bottom:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding:0 16px;
+    pointer-events:none;
+    z-index:50;
+  }
+  .undo-toast{
+    pointer-events:auto;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    max-width:420px;
+    width:100%;
+    background:var(--ink);
+    color:#fff;
+    border-radius:9px;
+    padding:11px 12px 11px 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+    border-left:5px solid var(--margin-red);
+    transform: translateY(14px);
+    opacity:0;
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .undo-toast.show{
+    transform: translateY(0);
+    opacity:1;
+  }
+  .undo-toast-text{
+    font-size:13.5px;
+    font-weight:600;
+    line-height:1.3;
+    flex:1;
+  }
+  .undo-btn{
+    flex-shrink:0;
+    font-family:'Space Mono', monospace;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:#fff;
+    background:rgba(255,255,255,0.14);
+    border:1.4px solid rgba(255,255,255,0.4);
+    border-radius:999px;
+    padding:6px 13px;
+    cursor:pointer;
+    transition: background .15s ease;
+  }
+  .undo-btn:hover{ background:rgba(255,255,255,0.26); }
+  .undo-btn:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+
   @media (max-width:560px){
     h1{ font-size:36px; }
     header.cover{ padding: 26px 18px 22px 46px; }
@@ -409,6 +477,8 @@
   <div id="listContainer"></div>
 
 </div>
+
+<div class="toast-container" id="toastContainer"></div>
 
 <script>
 (async function(){
@@ -463,6 +533,13 @@
       localStorage.setItem(LS_HIDE_KEY, val ? '1' : '0');
     }catch(err){ /* ignore */ }
   }
+
+  const FADE_DELAY_MS = 1000;   // espera antes de iniciar o fade-out
+  const FADE_DURATION_MS = 420; // duração da transição CSS do fade-out (ver .item transition)
+  const TOAST_DURATION_MS = 6000;
+  const pendingTimers = new Map(); // itemId -> { waitTimer, fadeTimer }
+  const toastTimers = new Map();   // itemId -> { el, timeout }
+  const toastContainer = document.getElementById('toastContainer');
 
   let data = null;
   try{
@@ -608,6 +685,7 @@
       const style = CATEGORY_STYLE[a.categoria] || {bg:"#eee", fg:"#555"};
       const row = document.createElement('div');
       row.className = 'item' + (a._done ? ' is-done' : '');
+      row.dataset.itemId = a._id;
 
       const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
       const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
@@ -626,18 +704,110 @@
       `;
 
       row.querySelector('.check').addEventListener('change', (e) => {
-        a._done = e.target.checked;
-        if(a._done){ doneIds.add(a._id); } else { doneIds.delete(a._id); }
-        saveDoneIds(doneIds);
-        if(state.hideDone && a._done){
-          render();
+        if(e.target.checked){
+          markDone(a, row);
         } else {
-          row.classList.toggle('is-done', a._done);
+          unmarkDone(a, row);
         }
       });
 
       sheet.appendChild(row);
     });
+  }
+
+  function findRow(itemId){
+    return [...listContainer.querySelectorAll('.item')].find(el => el.dataset.itemId === itemId);
+  }
+
+  function cancelPendingHide(itemId){
+    const t = pendingTimers.get(itemId);
+    if(t){
+      clearTimeout(t.waitTimer);
+      clearTimeout(t.fadeTimer);
+      pendingTimers.delete(itemId);
+    }
+  }
+
+  function markDone(a, row){
+    a._done = true;
+    doneIds.add(a._id);
+    saveDoneIds(doneIds);
+    row.classList.add('is-done');
+    cancelPendingHide(a._id);
+
+    if(!state.hideDone){
+      // "Ocultar concluídas" está desligado: o item permanece visível, só marcado.
+      return;
+    }
+
+    const waitTimer = setTimeout(() => {
+      row.classList.add('row-fade-out');
+      showUndoToast(a);
+      const fadeTimer = setTimeout(() => {
+        pendingTimers.delete(a._id);
+        if(a._done && state.hideDone){
+          render();
+        }
+      }, FADE_DURATION_MS);
+      pendingTimers.set(a._id, {waitTimer:null, fadeTimer});
+    }, FADE_DELAY_MS);
+    pendingTimers.set(a._id, {waitTimer, fadeTimer:null});
+  }
+
+  function unmarkDone(a, row){
+    cancelPendingHide(a._id);
+    a._done = false;
+    doneIds.delete(a._id);
+    saveDoneIds(doneIds);
+    row.classList.remove('is-done', 'row-fade-out');
+    dismissToast(a._id);
+  }
+
+  function undoItem(itemId){
+    cancelPendingHide(itemId);
+    const a = activities.find(x => x._id === itemId);
+    if(!a) return;
+    a._done = false;
+    doneIds.delete(itemId);
+    saveDoneIds(doneIds);
+    dismissToast(itemId);
+
+    const row = findRow(itemId);
+    if(row){
+      row.classList.remove('is-done', 'row-fade-out');
+      const cb = row.querySelector('.check');
+      if(cb) cb.checked = false;
+    } else {
+      // a linha já saiu do DOM (fade concluído + relistagem) — reconstrói a lista
+      render();
+    }
+  }
+
+  function showUndoToast(a){
+    dismissToast(a._id);
+    const toast = document.createElement('div');
+    toast.className = 'undo-toast';
+    toast.dataset.toastId = a._id;
+    const label = a.titulo ? a.titulo : `${a.disciplina} — ${a.categoria}`;
+    toast.innerHTML = `
+      <span class="undo-toast-text">“${escapeHtml(label)}” marcada como concluída.</span>
+      <button type="button" class="undo-btn">Desfazer</button>
+    `;
+    toast.querySelector('.undo-btn').addEventListener('click', () => undoItem(a._id));
+    toastContainer.appendChild(toast);
+    requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add('show')));
+
+    const timeout = setTimeout(() => dismissToast(a._id), TOAST_DURATION_MS);
+    toastTimers.set(a._id, {el: toast, timeout});
+  }
+
+  function dismissToast(itemId){
+    const t = toastTimers.get(itemId);
+    if(!t) return;
+    clearTimeout(t.timeout);
+    t.el.classList.remove('show');
+    setTimeout(() => t.el.remove(), 250);
+    toastTimers.delete(itemId);
   }
 
   render();
