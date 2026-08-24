@@ -1,4 +1,4 @@
-{
+f{
   "aluno": "Tiago",
   "ano": "2º Ano",
   "professora": "Profª. Fernanda",
@@ -116,7 +116,7 @@
       "categoria": "Lição de Casa",
       "disciplina": "História",
       "titulo": "",
-      "descricao": "Páginas 38 e 39 da apostila (atividade do planejamento semanal)."
+      "descricao": "Páginas 38 e 39 da apostila."
     },
     {
       "id": "2026-08-27_matematica_licao-de-casa-pags-48-49-50",
@@ -126,7 +126,7 @@
       "categoria": "Lição de Casa",
       "disciplina": "Matemática",
       "titulo": "",
-      "descricao": "Páginas 48, 49 e 50 da apostila (entrega na quinta-feira, 27/08)."
+      "descricao": "Páginas 48, 49 e 50 da apostila."
     },
     {
       "id": "2026-08-28_lingua-portuguesa_cartaz-publicitario-slogan",
@@ -147,7 +147,7 @@
       "categoria": "Lição de Casa",
       "disciplina": "Língua Portuguesa",
       "titulo": "",
-      "descricao": "Páginas 62, 63, 64 e 65 da apostila (entrega em 28/08)."
+      "descricao": "Páginas 62, 63, 64 e 65 da apostila."
     },
     {
       "id": "2026-08-31_matematica_licao-de-casa-pags-55-57",
@@ -157,7 +157,7 @@
       "categoria": "Lição de Casa",
       "disciplina": "Matemática",
       "titulo": "",
-      "descricao": "Páginas 55, 56 e 57 da apostila (entrega em 31/08)."
+      "descricao": "Páginas 55, 56 e 57 da apostila."
     },
     {
       "id": "2026-08-31_ciencias_licao-de-casa-pags-21-23",
@@ -165,9 +165,9 @@
       "diaSemana": "Seg",
       "dataOrdenacao": "2026-08-31",
       "categoria": "Lição de Casa",
-      "disciplina": "Ciências",
+      "disciplina": "Criatividade em acão",
       "titulo": "",
-      "descricao": "Atividade das páginas 21, 22 e 23 da apostila (entrega em 31/08)."
+      "descricao": "Atividade das páginas 21, 22 e 23 da apostila."
     },
     {
       "id": "2026-08-31_lingua-portuguesa_licao-de-casa-pags-68-70",
@@ -177,7 +177,7 @@
       "categoria": "Lição de Casa",
       "disciplina": "Língua Portuguesa",
       "titulo": "",
-      "descricao": "Páginas 68, 69 e 70 da apostila (entrega em 31/08)."
+      "descricao": "Páginas 68, 69 e 70 da apostila."
     },
     {
       "id": "2026-08-31_ciencias_licao-de-casa-pags-38-39",
