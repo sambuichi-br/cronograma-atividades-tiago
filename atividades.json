@@ -89,6 +89,16 @@
       "valor": "10,0 pts"
     },
     {
+      "id": "2026-08-26_lingua-portuguesa_licao-de-casa-pag-58",
+      "data": "26/08",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-08-26",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Página 58 da apostila (atividade do planejamento semanal)."
+    },
+    {
       "id": "2026-08-26_educacao-fisica_trabalho-avaliativo-de-educacao-f",
       "data": "26/08",
       "diaSemana": "Qua",
@@ -97,6 +107,26 @@
       "disciplina": "Educação Física",
       "titulo": "Trabalho Avaliativo de Educação Física",
       "descricao": "Entregar na Pasta Catálogo (Profª. Chris Gaya)."
+    },
+    {
+      "id": "2026-08-27_historia_licao-de-casa-pags-38-39",
+      "data": "27/08",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-08-27",
+      "categoria": "Lição de Casa",
+      "disciplina": "História",
+      "titulo": "",
+      "descricao": "Páginas 38 e 39 da apostila (atividade do planejamento semanal)."
+    },
+    {
+      "id": "2026-08-27_matematica_licao-de-casa-pags-48-49-50",
+      "data": "27/08",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-08-27",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "",
+      "descricao": "Páginas 48, 49 e 50 da apostila (entrega na quinta-feira, 27/08)."
     },
     {
       "id": "2026-08-28_lingua-portuguesa_cartaz-publicitario-slogan",
@@ -108,6 +138,56 @@
       "titulo": "Cartaz Publicitário & Slogan",
       "descricao": "Cartaz em folha A4 vertical para mural (Valor: 10,0 pts).",
       "valor": "10,0 pts"
+    },
+    {
+      "id": "2026-08-28_lingua-portuguesa_licao-de-casa-pags-62-65",
+      "data": "28/08",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-08-28",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Páginas 62, 63, 64 e 65 da apostila (entrega em 28/08)."
+    },
+    {
+      "id": "2026-08-31_matematica_licao-de-casa-pags-55-57",
+      "data": "31/08",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-08-31",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "",
+      "descricao": "Páginas 55, 56 e 57 da apostila (entrega em 31/08)."
+    },
+    {
+      "id": "2026-08-31_ciencias_licao-de-casa-pags-21-23",
+      "data": "31/08",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-08-31",
+      "categoria": "Lição de Casa",
+      "disciplina": "Ciências",
+      "titulo": "",
+      "descricao": "Atividade das páginas 21, 22 e 23 da apostila (entrega em 31/08)."
+    },
+    {
+      "id": "2026-08-31_lingua-portuguesa_licao-de-casa-pags-68-70",
+      "data": "31/08",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-08-31",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Páginas 68, 69 e 70 da apostila (entrega em 31/08)."
+    },
+    {
+      "id": "2026-08-31_ciencias_licao-de-casa-pags-38-39",
+      "data": "31/08",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-08-31",
+      "categoria": "Lição de Casa",
+      "disciplina": "Ciências",
+      "titulo": "",
+      "descricao": "Páginas 38 e 39 da apostila."
     },
     {
       "id": "2026-09-04_geral_evento-escolar",
