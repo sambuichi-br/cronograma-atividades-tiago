@@ -141,6 +141,130 @@
     outline:2px solid var(--cat-licao);
     outline-offset:1px;
   }
+  .today-btn{
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    gap:7px;
+    font-family:'Space Mono', monospace;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.02em;
+    color:#fff;
+    background:var(--margin-red);
+    border:none;
+    border-radius:8px;
+    padding:10px 16px;
+    cursor:pointer;
+    transition: background .15s ease, transform .1s ease;
+    white-space:nowrap;
+  }
+  .today-btn:hover{ background:#A83A33; }
+  .today-btn:active{ transform: scale(0.97); }
+  .today-btn:focus-visible{ outline:2px solid var(--cat-licao); outline-offset:2px; }
+  .today-btn .today-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:20px;
+    height:20px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.25);
+    font-size:11px;
+    padding:0 5px;
+  }
+  .today-btn.empty{
+    background:var(--paper-line);
+    color:var(--ink-soft);
+  }
+  .today-btn.empty:hover{ background:var(--ink-soft); color:#fff; }
+
+  /* ---------- Modal "Atividades de hoje" ---------- */
+  .modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(38,55,79,0.45);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:100;
+    opacity:0;
+    pointer-events:none;
+    transition: opacity .25s ease;
+    padding:20px;
+  }
+  .modal-overlay.show{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .modal{
+    background:var(--paper);
+    border-radius:12px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    max-width:560px;
+    width:100%;
+    max-height:80vh;
+    overflow-y:auto;
+    transform: translateY(20px) scale(0.97);
+    transition: transform .28s ease;
+  }
+  .modal-overlay.show .modal{
+    transform: translateY(0) scale(1);
+  }
+  .modal-header{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:22px 24px 14px;
+    border-bottom:2px dashed var(--paper-line);
+  }
+  .modal-header h2{
+    font-family:'Patrick Hand', cursive;
+    font-size:28px;
+    margin:0;
+    color:var(--margin-red);
+    transform: rotate(-0.5deg);
+  }
+  .modal-header .modal-date{
+    font-family:'Space Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+  .modal-close{
+    background:transparent;
+    border:none;
+    font-size:24px;
+    color:var(--ink-soft);
+    cursor:pointer;
+    padding:4px 8px;
+    border-radius:6px;
+    transition: background .15s ease, color .15s ease;
+    line-height:1;
+  }
+  .modal-close:hover{ background:var(--paper-line); color:var(--ink); }
+  .modal-close:focus-visible{ outline:2px solid var(--cat-licao); outline-offset:2px; }
+  .modal-body{ padding:8px 24px 20px; }
+  .modal-item{
+    display:grid;
+    grid-template-columns: 24px 1fr;
+    gap:10px;
+    align-items:start;
+    padding:14px 0;
+    border-bottom:1.5px dashed var(--paper-line);
+  }
+  .modal-item:last-child{ border-bottom:none; }
+  .modal-item .check{
+    margin-top:2px;
+  }
+  .modal-item-body{ min-width:0; }
+  .modal-empty{
+    padding:30px 10px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:15px;
+  }
   .filter-toggle{
     display:flex;
     align-items:center;
@@ -514,6 +638,10 @@
   <div class="controls">
     <div class="search-row">
       <input type="search" id="searchInput" placeholder="Buscar por disciplina, data ou palavra-chave...">
+      <button type="button" class="today-btn" id="todayBtn" aria-label="Ver atividades de hoje">
+        <span>Hoj</span>
+        <span class="today-count" id="todayCount">0</span>
+      </button>
     </div>
     <button type="button" class="filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="categoryChips">
       <span class="arrow">▶</span>
@@ -538,6 +666,19 @@
 </div>
 
 <div class="toast-container" id="toastContainer"></div>
+
+<div class="modal-overlay" id="todayModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="todayModalTitle">
+    <div class="modal-header">
+      <div>
+        <h2 id="todayModalTitle">Atividades de Hoje</h2>
+        <div class="modal-date" id="todayModalDate"></div>
+      </div>
+      <button type="button" class="modal-close" id="todayModalClose" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal-body" id="todayModalBody"></div>
+  </div>
+</div>
 
 <script>
 (async function(){
@@ -922,6 +1063,104 @@
     setTimeout(() => t.el.remove(), 250);
     toastTimers.delete(itemId);
   }
+
+  // ---- Botão "Hoje" e modal ----
+  const todayBtn = document.getElementById('todayBtn');
+  const todayCountEl = document.getElementById('todayCount');
+  const todayModal = document.getElementById('todayModal');
+  const todayModalBody = document.getElementById('todayModalBody');
+  const todayModalDate = document.getElementById('todayModalDate');
+  const todayModalClose = document.getElementById('todayModalClose');
+
+  function getTodayISO(){
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth()+1).padStart(2,'0');
+    const d = String(now.getDate()).padStart(2,'0');
+    return `${y}-${m}-${d}`;
+  }
+
+  function getTodayActivities(){
+    const todayISO = getTodayISO();
+    return activities.filter(a => (a.dataOrdenacao||'') === todayISO);
+  }
+
+  function updateTodayButton(){
+    const count = getTodayActivities().length;
+    todayCountEl.textContent = count;
+    todayBtn.classList.toggle('empty', count === 0);
+  }
+
+  function openTodayModal(){
+    const todayISO = getTodayISO();
+    const formatted = new Intl.DateTimeFormat('pt-BR', {
+      weekday:'long', day:'numeric', month:'long', year:'numeric',
+      timeZone:'America/Sao_Paulo'
+    }).format(new Date(todayISO + 'T12:00:00'));
+    todayModalDate.textContent = formatted.charAt(0).toUpperCase() + formatted.slice(1);
+
+    const todays = getTodayActivities().sort((x,y) => (x.disciplina||'').localeCompare(y.disciplina||''));
+    todayModalBody.innerHTML = '';
+
+    if(todays.length === 0){
+      todayModalBody.innerHTML = '<div class="modal-empty">Nenhuma atividade para hoje. Aproveite o dia!</div>';
+    } else {
+      todays.forEach(a => {
+        const style = CATEGORY_STYLE[a.categoria] || {bg:'#eee', fg:'#555'};
+        const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
+        const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
+
+        const row = document.createElement('div');
+        row.className = 'modal-item' + (a._done ? ' is-done' : '');
+        row.innerHTML = `
+          <input type="checkbox" class="check" ${a._done ? 'checked' : ''} aria-label="Marcar como concluída">
+          <div class="modal-item-body">
+            <div class="badges">
+              <span class="tag" style="background:${style.bg}; color:${style.fg};">${escapeHtml(a.categoria)}</span>
+              <span class="tag disc">${escapeHtml(a.disciplina)}</span>
+            </div>
+            ${tituloHtml}
+            <p class="item-desc">${escapeHtml(a.descricao)}${valorHtml}</p>
+          </div>
+        `;
+        row.querySelector('.check').addEventListener('change', (e) => {
+          if(e.target.checked){
+            a._done = true;
+            doneIds.add(a._id);
+            saveDoneIds(doneIds);
+            row.classList.add('is-done');
+          } else {
+            a._done = false;
+            doneIds.delete(a._id);
+            saveDoneIds(doneIds);
+            row.classList.remove('is-done');
+          }
+          render();
+          updateTodayButton();
+        });
+        todayModalBody.appendChild(row);
+      });
+    }
+
+    todayModal.classList.add('show');
+    todayModal.setAttribute('aria-hidden','false');
+  }
+
+  function closeTodayModal(){
+    todayModal.classList.remove('show');
+    todayModal.setAttribute('aria-hidden','true');
+  }
+
+  todayBtn.addEventListener('click', openTodayModal);
+  todayModalClose.addEventListener('click', closeTodayModal);
+  todayModal.addEventListener('click', (e) => {
+    if(e.target === todayModal) closeTodayModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && todayModal.classList.contains('show')) closeTodayModal();
+  });
+
+  updateTodayButton();
 
   render();
 })();
