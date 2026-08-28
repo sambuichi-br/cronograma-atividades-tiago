@@ -190,6 +190,16 @@
       "descricao": "Páginas 38 e 39 da apostila."
     },
     {
+      "id": "2026-09-01_geral_atividade-folha-volta-as-aulas",
+      "data": "01/09",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-09-01",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Atividade folha volta às aulas (2 páginas)."
+    },
+    {
       "id": "2026-09-04_geral_evento-escolar",
       "data": "04/09",
       "diaSemana": "Sex",
@@ -210,24 +220,94 @@
       "descricao": "Independência do Brasil."
     },
     {
+      "id": "2026-09-08_matematica_licao-de-casa-pags-69-73",
+      "data": "08/09",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-09-08",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "",
+      "descricao": "Páginas: 69, 70, 71, 72 e 73."
+    },
+    {
       "id": "2026-09-10_geral_avaliacao",
-      "data": "10 a 17/09",
-      "diaSemana": "",
+      "data": "10/09",
+      "diaSemana": "Qui",
       "dataOrdenacao": "2026-09-10",
       "categoria": "Avaliação",
       "disciplina": "Geral",
       "titulo": "",
-      "descricao": "Período de Avaliação Bimestral."
+      "descricao": "Avaliação Bimestral."
     },
     {
-      "id": "2026-09-21_geral_avaliacao",
-      "data": "21 e 22/09",
-      "diaSemana": "",
+      "id": "2026-09-11_geral_avaliacao",
+      "data": "11/09",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-09-11",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-14_geral_avaliacao",
+      "data": "14/09",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-09-14",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-15_geral_avaliacao",
+      "data": "15/09",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-09-15",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-16_geral_avaliacao",
+      "data": "16/09",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-09-16",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-17_geral_avaliacao",
+      "data": "17/09",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-09-17",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-21_geral_recuperacao-e-substitutivas",
+      "data": "21/09",
+      "diaSemana": "Seg",
       "dataOrdenacao": "2026-09-21",
       "categoria": "Avaliação",
       "disciplina": "Geral",
       "titulo": "",
-      "descricao": "Período de Recuperação e Substitutivas (Horário: 13h às 14h)."
+      "descricao": "Recuperação e Substitutivas (Horário: 13h às 14h)."
+    },
+    {
+      "id": "2026-09-22_geral_recuperacao-e-substitutivas",
+      "data": "22/09",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-09-22",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Recuperação e Substitutivas (Horário: 13h às 14h)."
     },
     {
       "id": "2026-09-29_geral_reuniao",
@@ -301,13 +381,53 @@
     },
     {
       "id": "2026-11-23_geral_avaliacao",
-      "data": "23 a 30/11",
-      "diaSemana": "",
+      "data": "23/11",
+      "diaSemana": "Seg",
       "dataOrdenacao": "2026-11-23",
       "categoria": "Avaliação",
       "disciplina": "Geral",
       "titulo": "",
-      "descricao": "Período de Avaliação Bimestral."
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-11-24_geral_avaliacao",
+      "data": "24/11",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-11-24",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-11-25_geral_avaliacao",
+      "data": "25/11",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-11-25",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-11-26_geral_avaliacao",
+      "data": "26/11",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-11-26",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-11-27_geral_avaliacao",
+      "data": "27/11",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-11-27",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
     },
     {
       "id": "2026-11-28_geral-judo_evento-escolar",
@@ -320,14 +440,34 @@
       "descricao": "Dia Esportivo (Sábado letivo) - Passagem da Faixa do Judô - Parque Aberto."
     },
     {
-      "id": "2026-12-01_geral_avaliacao",
-      "data": "01 e 02/12",
-      "diaSemana": "",
+      "id": "2026-11-30_geral_avaliacao",
+      "data": "30/11",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-11-30",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-12-01_geral_recuperacao-e-substitutiva",
+      "data": "01/12",
+      "diaSemana": "Ter",
       "dataOrdenacao": "2026-12-01",
       "categoria": "Avaliação",
       "disciplina": "Geral",
       "titulo": "",
-      "descricao": "Período de Recuperação e Substitutiva (Horário: 13h às 14h)."
+      "descricao": "Recuperação e Substitutiva (Horário: 13h às 14h)."
+    },
+    {
+      "id": "2026-12-02_geral_recuperacao-e-substitutiva",
+      "data": "02/12",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-12-02",
+      "categoria": "Avaliação",
+      "disciplina": "Geral",
+      "titulo": "",
+      "descricao": "Recuperação e Substitutiva (Horário: 13h às 14h)."
     },
     {
       "id": "2026-12-03_geral_avaliacao",
