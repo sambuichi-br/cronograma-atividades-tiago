@@ -1,1054 +1,1251 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cronograma do Tiago — 2º Ano</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Space+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma do Tiago — 2º Ano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Space+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "y6wxqf0w8p");
-</script>
-<style>
-  :root{
-    --paper:#FBF7EC;
-    --paper-line:#E4DCC8;
-    --ink:#26374F;
-    --ink-soft:#5B6B85;
-    --margin-red:#C1443C;
-    --spiral:#D8CDB0;
+  </script>
+  <style>
+    :root {
+      --paper: #FBF7EC;
+      --paper-line: #E4DCC8;
+      --ink: #26374F;
+      --ink-soft: #5B6B85;
+      --margin-red: #C1443C;
+      --spiral: #D8CDB0;
 
-    --cat-licao:#4F86C6;      --cat-licao-bg:#E4EEFA;
-    --cat-trabalho:#C98A1B;   --cat-trabalho-bg:#FBEDD3;
-    --cat-evento:#7C5CA6;     --cat-evento-bg:#EEE6F6;
-    --cat-suspensa:#C0564C;   --cat-suspensa-bg:#FAE4E1;
-    --cat-avaliacao:#B96A2C;  --cat-avaliacao-bg:#F8E6D6;
-    --cat-reuniao:#3F6E96;    --cat-reuniao-bg:#E0EBF4;
-    --cat-passeio:#4C8B5C;    --cat-passeio-bg:#E2F0E4;
+      --cat-licao: #4F86C6;
+      --cat-licao-bg: #E4EEFA;
+      --cat-trabalho: #C98A1B;
+      --cat-trabalho-bg: #FBEDD3;
+      --cat-evento: #7C5CA6;
+      --cat-evento-bg: #EEE6F6;
+      --cat-suspensa: #C0564C;
+      --cat-suspensa-bg: #FAE4E1;
+      --cat-avaliacao: #B96A2C;
+      --cat-avaliacao-bg: #F8E6D6;
+      --cat-reuniao: #3F6E96;
+      --cat-reuniao-bg: #E0EBF4;
+      --cat-passeio: #4C8B5C;
+      --cat-passeio-bg: #E2F0E4;
 
-    --done-check: var(--margin-red);
-  }
+      --done-check: var(--margin-red);
+    }
 
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:#EFE8D8;
-    background-image:
-      radial-gradient(circle at 1px 1px, rgba(38,55,79,0.06) 1px, transparent 0);
-    background-size: 14px 14px;
-    font-family:'Nunito', sans-serif;
-    color:var(--ink);
-    min-height:100vh;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  .page-wrap{
-    max-width:900px;
-    margin:0 auto;
-    padding: 28px 18px 80px;
-  }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
 
-  /* ---------- Header: capa do caderno ---------- */
-  header.cover{
-    position:relative;
-    background:var(--paper);
-    border-radius:10px;
-    padding: 30px 34px 26px 56px;
-    box-shadow: 0 10px 26px rgba(38,55,79,0.14), 0 2px 0 rgba(0,0,0,0.03);
-    overflow:hidden;
-    margin-bottom:22px;
-  }
-  header.cover::before{
-    /* margem vermelha */
-    content:"";
-    position:absolute;
-    left:38px; top:0; bottom:0;
-    width:2px;
-    background:var(--margin-red);
-    opacity:0.55;
-  }
-  .holes{
-    position:absolute;
-    left:14px; top:0; bottom:0;
-    width:14px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    align-items:center;
-  }
-  .holes span{
-    width:11px; height:11px; border-radius:50%;
-    background:#EFE8D8;
-    box-shadow: inset 0 2px 3px rgba(0,0,0,0.18);
-  }
-  .eyebrow{
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--ink-soft);
-    margin:0 0 6px;
-  }
-  h1{
-    font-family:'Patrick Hand', cursive;
-    font-size:46px;
-    line-height:1;
-    margin:0 0 10px;
-    color:var(--ink);
-    transform: rotate(-0.6deg);
-  }
-  .meta-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px 22px;
-    font-size:14.5px;
-    color:var(--ink-soft);
-    font-weight:600;
-  }
-  .meta-row b{ color:var(--ink); font-weight:800; }
+    body {
+      background: #EFE8D8;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(38, 55, 79, 0.06) 1px, transparent 0);
+      background-size: 14px 14px;
+      font-family: 'Nunito', sans-serif;
+      color: var(--ink);
+      min-height: 100vh;
+    }
 
-  /* ---------- Painel de controles ---------- */
-  .controls{
-    background:var(--paper);
-    border-radius:10px;
-    padding:16px 20px;
-    margin-bottom:18px;
-    box-shadow: 0 6px 18px rgba(38,55,79,0.10);
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-  }
-  .search-row{
-    display:flex;
-    gap:10px;
-    align-items:center;
-  }
-  .search-row input[type="search"]{
-    flex:1;
-    font-family:'Nunito', sans-serif;
-    font-size:15px;
-    padding:10px 14px;
-    border-radius:8px;
-    border:1.5px solid var(--paper-line);
-    background:#fff;
-    color:var(--ink);
-  }
-  .search-row input[type="search"]:focus{
-    outline:2px solid var(--cat-licao);
-    outline-offset:1px;
-  }
-  .filter-toggle{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.02em;
-    color:var(--ink-soft);
-    background:transparent;
-    border:none;
-    cursor:pointer;
-    padding:2px 0;
-    transition: color .15s ease;
-    user-select:none;
-  }
-  .filter-toggle:hover{ color:var(--ink); }
-  .filter-toggle .arrow{
-    display:inline-block;
-    transition: transform .2s ease;
-    font-size:10px;
-  }
-  .filter-toggle[aria-expanded="true"] .arrow{
-    transform: rotate(90deg);
-  }
-  .chip-row{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    overflow:hidden;
-    max-height:0;
-    opacity:0;
-    transition: max-height .3s ease, opacity .25s ease, margin .3s ease;
-    margin-top:0;
-  }
-  .chip-row.expanded{
-    max-height:200px;
-    opacity:1;
-    margin-top:4px;
-  }
-  .chip{
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    letter-spacing:.02em;
-    border:1.5px solid var(--paper-line);
-    background:#fff;
-    color:var(--ink-soft);
-    padding:6px 12px;
-    border-radius:999px;
-    cursor:pointer;
-    transition: all .15s ease;
-    user-select:none;
-  }
-  .chip:hover{ border-color:var(--ink-soft); }
-  .chip[aria-pressed="true"]{
-    background:var(--ink);
-    border-color:var(--ink);
-    color:#fff;
-  }
-  .stat-line{
-    font-size:13px;
-    color:var(--ink-soft);
-    font-weight:600;
-  }
-  .toggle-row{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px 18px;
-    padding-top:2px;
-    border-top:1.5px dashed var(--paper-line);
-    margin-top:2px;
-  }
-  .hide-done-toggle{
-    display:flex;
-    align-items:center;
-    gap:9px;
-    font-size:14px;
-    font-weight:700;
-    color:var(--ink);
-    cursor:pointer;
-    user-select:none;
-  }
-  .hide-done-toggle input[type="checkbox"]{
-    appearance:none;
-    -webkit-appearance:none;
-    width:38px; height:22px;
-    border-radius:999px;
-    background:var(--paper-line);
-    border:none;
-    position:relative;
-    cursor:pointer;
-    flex-shrink:0;
-    transition: background .15s ease;
-  }
-  .hide-done-toggle input[type="checkbox"]::after{
-    content:"";
-    position:absolute;
-    top:2px; left:2px;
-    width:18px; height:18px;
-    border-radius:50%;
-    background:#fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
-    transition: transform .15s ease;
-  }
-  .hide-done-toggle input[type="checkbox"]:checked{
-    background:var(--margin-red);
-  }
-  .hide-done-toggle input[type="checkbox"]:checked::after{
-    transform: translateX(16px);
-  }
-  .hide-done-toggle input[type="checkbox"]:focus-visible{
-    outline:2px solid var(--cat-licao);
-    outline-offset:2px;
-  }
+    .page-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 18px 80px;
+    }
 
-  /* ---------- Meses (divisórias) ---------- */
-  .month-divider{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin: 30px 4px 12px;
-  }
-  .month-divider .label{
-    font-family:'Patrick Hand', cursive;
-    font-size:24px;
-    color:var(--margin-red);
-    white-space:nowrap;
-    transform: rotate(-1deg);
-  }
-  .month-divider .rule{
-    flex:1;
-    height:2px;
-    background: repeating-linear-gradient(90deg, var(--ink-soft) 0 6px, transparent 6px 12px);
-    opacity:.35;
-  }
+    /* ---------- Header: capa do caderno ---------- */
+    header.cover {
+      position: relative;
+      background: var(--paper);
+      border-radius: 10px;
+      padding: 15px 34px 15px 56px;
+      box-shadow: 0 10px 26px rgba(38, 55, 79, 0.14), 0 2px 0 rgba(0, 0, 0, 0.03);
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
 
-  /* ---------- Lista / Página pautada ---------- */
-  .sheet{
-    position:relative;
-    background:var(--paper);
-    border-radius:10px;
-    box-shadow: 0 10px 26px rgba(38,55,79,0.12);
-    padding: 6px 22px 10px 52px;
-    overflow:hidden;
-  }
-  .sheet::before{
-    content:"";
-    position:absolute; left:34px; top:0; bottom:0; width:2px;
-    background:var(--margin-red); opacity:.5;
-  }
-  .holes-sheet{
-    position:absolute; left:12px; top:0; bottom:0; width:12px;
-    display:flex; flex-direction:column; justify-content:space-evenly; align-items:center;
-  }
-  .holes-sheet span{
-    width:9px; height:9px; border-radius:50%;
-    background:#EFE8D8; box-shadow: inset 0 2px 2px rgba(0,0,0,0.16);
-  }
+    header.cover::before {
+      /* margem vermelha */
+      content: "";
+      position: absolute;
+      left: 38px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--margin-red);
+      opacity: 0.55;
+    }
 
-  .item{
-    display:grid;
-    grid-template-columns: 26px 78px 1fr;
-    gap:6px 16px;
-    align-items:start;
-    padding: 14px 4px;
-    border-bottom: 1.5px dashed var(--paper-line);
-    max-height:400px;
-    overflow:hidden;
-    transition: opacity .38s ease, max-height .42s ease, padding .42s ease, border-color .42s ease, margin .42s ease;
-  }
-  .item:last-child{ border-bottom:none; }
+    header #lastUpdateNote {
+      font-size: 11px;
+      color: var(--ink-soft);
+      margin-bottom: 0;
+    }
 
-  .item.is-done{ opacity:.5; }
-  .item.is-done .item-title, .item.is-done .item-desc{ text-decoration: line-through; text-decoration-color: var(--done-check); }
+    .holes {
+      position: absolute;
+      left: 14px;
+      top: 0;
+      bottom: 0;
+      width: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
 
-  .item.row-fade-out{
-    opacity:0;
-    max-height:0;
-    padding-top:0;
-    padding-bottom:0;
-    margin:0;
-    border-bottom-color:transparent;
-  }
+    .holes span {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #EFE8D8;
+      box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.18);
+    }
 
-  .check{
-    appearance:none;
-    -webkit-appearance:none;
-    width:22px; height:22px;
-    margin-top:2px;
-    border-radius:6px;
-    border:2px solid var(--ink-soft);
-    background:#fff;
-    cursor:pointer;
-    position:relative;
-    flex-shrink:0;
-  }
-  .check:checked{
-    background:var(--done-check);
-    border-color:var(--done-check);
-  }
-  .check:checked::after{
-    content:"";
-    position:absolute; left:6px; top:2px;
-    width:6px; height:11px;
-    border:solid #fff;
-    border-width:0 2.5px 2.5px 0;
-    transform:rotate(40deg);
-  }
-  .check:focus-visible{ outline:2px solid var(--cat-licao); outline-offset:2px; }
+    .eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin: 0 0 6px;
+    }
 
-  .date-block{
-    font-family:'Space Mono', monospace;
-    font-size:13px;
-    line-height:1.25;
-    color:var(--ink);
-    padding-top:3px;
-  }
-  .date-block .dow{
-    display:block;
-    font-size:10.5px;
-    color:var(--ink-soft);
-    text-transform:uppercase;
-    letter-spacing:.06em;
-  }
+    h1 {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 46px;
+      line-height: 1;
+      margin: -10px 0 10px;
+      color: var(--ink);
+      transform: rotate(-0.6deg);
+    }
 
-  .item-body{ min-width:0; }
-  .badges{
-    display:flex; flex-wrap:wrap; gap:6px; margin-bottom:6px;
-  }
-  .tag{
-    font-family:'Space Mono', monospace;
-    font-size:10.5px;
-    font-weight:700;
-    letter-spacing:.02em;
-    padding: 3px 9px 3px;
-    border-radius:5px;
-    transform: rotate(-1.1deg);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-    white-space:nowrap;
-  }
-  .tag.disc{
-    background:transparent;
-    border:1.4px solid var(--ink-soft);
-    color:var(--ink-soft);
-    transform: rotate(0.8deg);
-  }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
 
-  .item-title{
-    font-weight:800;
-    font-size:15.5px;
-    margin:0 0 2px;
-    color:var(--ink);
-  }
-  .item-desc{
-    font-size:14.5px;
-    line-height:1.45;
-    color:var(--ink);
-    margin:0;
-  }
-  .valor-pill{
-    display:inline-block;
-    margin-left:6px;
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    color:var(--cat-trabalho);
-    font-weight:700;
-  }
+    .meta-row b {
+      color: var(--ink);
+      font-weight: 800;
+    }
 
-  .empty-state{
-    padding: 40px 20px;
-    text-align:center;
-    color:var(--ink-soft);
-    font-size:15px;
-  }
+    /* ---------- Painel de controles ---------- */
+    .controls {
+      background: var(--paper);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 18px rgba(38, 55, 79, 0.10);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-  /* ---------- Ribbon de desfazer ---------- */
-  .toast-container{
-    position:fixed;
-    left:0; right:0; bottom:18px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-    padding:0 16px;
-    pointer-events:none;
-    z-index:50;
-  }
-  .undo-toast{
-    pointer-events:auto;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    max-width:420px;
-    width:100%;
-    background:var(--ink);
-    color:#fff;
-    border-radius:9px;
-    padding:11px 12px 11px 16px;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
-    border-left:5px solid var(--margin-red);
-    transform: translateY(14px);
-    opacity:0;
-    transition: transform .25s ease, opacity .25s ease;
-  }
-  .undo-toast.show{
-    transform: translateY(0);
-    opacity:1;
-  }
-  .undo-toast-text{
-    font-size:13.5px;
-    font-weight:600;
-    line-height:1.3;
-    flex:1;
-  }
-  .undo-btn{
-    flex-shrink:0;
-    font-family:'Space Mono', monospace;
-    font-size:12.5px;
-    font-weight:700;
-    letter-spacing:.02em;
-    color:#fff;
-    background:rgba(255,255,255,0.14);
-    border:1.4px solid rgba(255,255,255,0.4);
-    border-radius:999px;
-    padding:6px 13px;
-    cursor:pointer;
-    transition: background .15s ease;
-  }
-  .undo-btn:hover{ background:rgba(255,255,255,0.26); }
-  .undo-btn:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+    .search-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
 
-  /* ---------- Rodapé ---------- */
-  .repo-footer{
-    text-align:center;
-    margin: 22px 4px 0;
-    padding-top:14px;
-    font-family:'Space Mono', monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-  }
+    .search-row input[type="search"] {
+      flex: 1;
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1.5px solid var(--paper-line);
+      background: #fff;
+      color: var(--ink);
+    }
 
-  .today-action-row{
-    margin: 4px 0 16px;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-  }
-  .today-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:9px;
-    font-family:'Space Mono', monospace;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.03em;
-    color:#ffffff;
-    background:linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-    border:1.5px solid #1E40AF;
-    border-radius:10px;
-    padding:10px 18px;
-    cursor:pointer;
-    transition: all .2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35), 0 2px 4px rgba(0, 0, 0, 0.08);
-    position:relative;
-    user-select:none;
-  }
-  .today-btn:hover{
-    background:linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
-    border-color:#1E3A8A;
-    color:#ffffff;
-    transform:translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.48), 0 3px 6px rgba(0, 0, 0, 0.12);
-  }
-  .today-btn:hover .today-btn-icon{
-    transform:scale(1.2) rotate(-6deg);
-  }
-  .today-btn:active{
-    transform:translateY(1px) scale(0.99);
-    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
-  }
-  .today-btn:focus-visible{
-    outline:3px solid #60A5FA;
-    outline-offset:2px;
-  }
-  .today-btn-icon{
-    font-size:16px;
-    display:inline-block;
-    transition:transform .2s ease;
-  }
+    .search-row input[type="search"]:focus {
+      outline: 2px solid var(--cat-licao);
+      outline-offset: 1px;
+    }
 
-  /* ---------- Modal de Atividades do Dia ---------- */
-  .modal-backdrop{
-    position:fixed;
-    top:0; left:0; right:0; bottom:0;
-    background:rgba(38, 55, 79, 0.52);
-    backdrop-filter:blur(4px);
-    -webkit-backdrop-filter:blur(4px);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:18px;
-    z-index:100;
-    opacity:0;
-    visibility:hidden;
-    transition: opacity .25s ease, visibility .25s ease;
-  }
-  .modal-backdrop.is-open{
-    opacity:1;
-    visibility:visible;
-  }
-  .modal-card{
-    position:relative;
-    background:var(--paper);
-    border-radius:12px;
-    box-shadow: 0 22px 50px rgba(38,55,79,0.28), 0 2px 4px rgba(0,0,0,0.06);
-    max-width:620px;
-    width:100%;
-    max-height:85vh;
-    display:flex;
-    flex-direction:column;
-    padding:24px 22px 20px 48px;
-    overflow:hidden;
-    transform:scale(0.94) translateY(12px);
-    transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .modal-backdrop.is-open .modal-card{
-    transform:scale(1) translateY(0);
-  }
-  .modal-card::before{
-    content:"";
-    position:absolute;
-    left:32px; top:0; bottom:0;
-    width:2px;
-    background:var(--margin-red);
-    opacity:0.5;
-  }
-  .holes-modal{
-    position:absolute;
-    left:11px; top:0; bottom:0;
-    width:12px;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-evenly;
-    align-items:center;
-  }
-  .holes-modal span{
-    width:9px; height:9px; border-radius:50%;
-    background:#EFE8D8;
-    box-shadow: inset 0 2px 2px rgba(0,0,0,0.16);
-  }
-  .modal-header{
-    display:flex;
-    align-items:flex-start;
-    justify-content:space-between;
-    gap:12px;
-    padding-bottom:12px;
-    border-bottom:1.5px dashed var(--paper-line);
-    margin-bottom:8px;
-  }
-  .modal-eyebrow{
-    font-family:'Space Mono', monospace;
-    font-size:11px;
-    letter-spacing:.12em;
-    text-transform:uppercase;
-    color:var(--margin-red);
-    margin:0 0 4px;
-    font-weight:700;
-  }
-  .modal-title{
-    font-family:'Patrick Hand', cursive;
-    font-size:32px;
-    line-height:1.1;
-    margin:0;
-    color:var(--ink);
-    transform: rotate(-0.5deg);
-  }
-  .modal-close{
-    background:#fff;
-    border:1.5px solid var(--paper-line);
-    color:var(--ink-soft);
-    font-size:15px;
-    width:32px; height:32px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor:pointer;
-    transition: all .15s ease;
-    flex-shrink:0;
-    font-family:'Nunito', sans-serif;
-    font-weight:700;
-  }
-  .modal-close:hover{
-    background:var(--paper-line);
-    color:var(--ink);
-    border-color:var(--ink-soft);
-  }
-  .modal-close:focus-visible{
-    outline:2px solid var(--cat-licao);
-    outline-offset:2px;
-  }
-  .modal-body{
-    overflow-y:auto;
-    padding-right:6px;
-    display:flex;
-    flex-direction:column;
-  }
-  .modal-body::-webkit-scrollbar{
-    width:6px;
-  }
-  .modal-body::-webkit-scrollbar-thumb{
-    background:var(--paper-line);
-    border-radius:999px;
-  }
-  .modal-body::-webkit-scrollbar-thumb:hover{
-    background:var(--ink-soft);
-  }
-  .modal-empty{
-    padding:34px 16px;
-    text-align:center;
-    color:var(--ink-soft);
-  }
-  .modal-empty-emoji{
-    font-size:38px;
-    margin-bottom:8px;
-  }
-  .modal-empty-title{
-    font-family:'Patrick Hand', cursive;
-    font-size:24px;
-    color:var(--ink);
-    margin:0 0 6px;
-  }
-  .modal-empty-desc{
-    font-size:14.5px;
-    margin:0;
-    color:var(--ink-soft);
-  }
+    .filter-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: var(--ink-soft);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 2px 0;
+      transition: color .15s ease;
+      user-select: none;
+    }
 
-  @media (max-width:560px){
-    h1{ font-size:36px; }
-    header.cover{ padding: 26px 18px 22px 46px; }
-    .sheet{ padding: 6px 12px 10px 40px; }
-    .item{ grid-template-columns: 22px 64px 1fr; gap:6px 10px; }
-    .modal-card{ padding: 20px 14px 16px 38px; }
-    .modal-card::before{ left:26px; }
-    .holes-modal{ left:8px; }
-    .modal-title{ font-size:26px; }
-  }
+    .filter-toggle:hover {
+      color: var(--ink);
+    }
 
-  @media (prefers-reduced-motion: reduce){
-    *{ transition:none !important; }
-  }
-</style>
+    .filter-toggle .arrow {
+      display: inline-block;
+      transition: transform .2s ease;
+      font-size: 10px;
+    }
+
+    .filter-toggle[aria-expanded="true"] .arrow {
+      transform: rotate(90deg);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height .3s ease, opacity .25s ease, margin .3s ease;
+      margin-top: 0;
+    }
+
+    .chip-row.expanded {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 4px;
+    }
+
+    .chip {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .02em;
+      border: 1.5px solid var(--paper-line);
+      background: #fff;
+      color: var(--ink-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all .15s ease;
+      user-select: none;
+    }
+
+    .chip:hover {
+      border-color: var(--ink-soft);
+    }
+
+    .chip[aria-pressed="true"] {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
+
+    .stat-line {
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-weight: 600;
+    }
+
+    .toggle-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 18px;
+      padding-top: 2px;
+      border-top: 1.5px dashed var(--paper-line);
+      margin-top: 2px;
+    }
+
+    .hide-done-toggle {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .hide-done-toggle input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 38px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--paper-line);
+      border: none;
+      position: relative;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background .15s ease;
+    }
+
+    .hide-done-toggle input[type="checkbox"]::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      transition: transform .15s ease;
+    }
+
+    .hide-done-toggle input[type="checkbox"]:checked {
+      background: var(--margin-red);
+    }
+
+    .hide-done-toggle input[type="checkbox"]:checked::after {
+      transform: translateX(16px);
+    }
+
+    .hide-done-toggle input[type="checkbox"]:focus-visible {
+      outline: 2px solid var(--cat-licao);
+      outline-offset: 2px;
+    }
+
+    /* ---------- Meses (divisórias) ---------- */
+    .month-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 30px 4px 12px;
+    }
+
+    .month-divider .label {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 24px;
+      color: var(--margin-red);
+      white-space: nowrap;
+      transform: rotate(-1deg);
+    }
+
+    .month-divider .rule {
+      flex: 1;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, var(--ink-soft) 0 6px, transparent 6px 12px);
+      opacity: .35;
+    }
+
+    /* ---------- Lista / Página pautada ---------- */
+    .sheet {
+      position: relative;
+      background: var(--paper);
+      border-radius: 10px;
+      box-shadow: 0 10px 26px rgba(38, 55, 79, 0.12);
+      padding: 6px 22px 10px 52px;
+      overflow: hidden;
+    }
+
+    .sheet::before {
+      content: "";
+      position: absolute;
+      left: 34px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--margin-red);
+      opacity: .5;
+    }
+
+    .holes-sheet {
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .holes-sheet span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #EFE8D8;
+      box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.16);
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 26px 78px 1fr;
+      gap: 6px 16px;
+      align-items: start;
+      padding: 14px 4px;
+      border-bottom: 1.5px dashed var(--paper-line);
+      max-height: 400px;
+      overflow: hidden;
+      transition: opacity .38s ease, max-height .42s ease, padding .42s ease, border-color .42s ease, margin .42s ease;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .item.is-done {
+      opacity: .5;
+    }
+
+    .item.is-done .item-title,
+    .item.is-done .item-desc {
+      text-decoration: line-through;
+      text-decoration-color: var(--done-check);
+    }
+
+    .item.row-fade-out {
+      opacity: 0;
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      border-bottom-color: transparent;
+    }
+
+    .check {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      margin-top: 2px;
+      border-radius: 6px;
+      border: 2px solid var(--ink-soft);
+      background: #fff;
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .check:checked {
+      background: var(--done-check);
+      border-color: var(--done-check);
+    }
+
+    .check:checked::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 11px;
+      border: solid #fff;
+      border-width: 0 2.5px 2.5px 0;
+      transform: rotate(40deg);
+    }
+
+    .check:focus-visible {
+      outline: 2px solid var(--cat-licao);
+      outline-offset: 2px;
+    }
+
+    .date-block {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      line-height: 1.25;
+      color: var(--ink);
+      padding-top: 3px;
+    }
+
+    .date-block .dow {
+      display: block;
+      font-size: 10.5px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .item-body {
+      min-width: 0;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      padding: 3px 9px 3px;
+      border-radius: 5px;
+      transform: rotate(-1.1deg);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+      white-space: nowrap;
+    }
+
+    .tag.disc {
+      background: transparent;
+      border: 1.4px solid var(--ink-soft);
+      color: var(--ink-soft);
+      transform: rotate(0.8deg);
+    }
+
+    .item-title {
+      font-weight: 800;
+      font-size: 15.5px;
+      margin: 0 0 2px;
+      color: var(--ink);
+    }
+
+    .item-desc {
+      font-size: 14.5px;
+      line-height: 1.45;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .valor-pill {
+      display: inline-block;
+      margin-left: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--cat-trabalho);
+      font-weight: 700;
+    }
+
+    .empty-state {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--ink-soft);
+      font-size: 15px;
+    }
+
+    /* ---------- Ribbon de desfazer ---------- */
+    .toast-container {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    .undo-toast {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 420px;
+      width: 100%;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 9px;
+      padding: 11px 12px 11px 16px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+      border-left: 5px solid var(--margin-red);
+      transform: translateY(14px);
+      opacity: 0;
+      transition: transform .25s ease, opacity .25s ease;
+    }
+
+    .undo-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .undo-toast-text {
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.3;
+      flex: 1;
+    }
+
+    .undo-btn {
+      flex-shrink: 0;
+      font-family: 'Space Mono', monospace;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1.4px solid rgba(255, 255, 255, 0.4);
+      border-radius: 999px;
+      padding: 6px 13px;
+      cursor: pointer;
+      transition: background .15s ease;
+    }
+
+    .undo-btn:hover {
+      background: rgba(255, 255, 255, 0.26);
+    }
+
+    .undo-btn:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* ---------- Rodapé ---------- */
+    .repo-footer {
+      text-align: center;
+      margin: 22px 4px 0;
+      padding-top: 14px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .today-action-row {
+      margin: 4px 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .today-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      color: #ffffff;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      border: 1.5px solid #1E40AF;
+      border-radius: 10px;
+      padding: 10px 18px;
+      cursor: pointer;
+      transition: all .2s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35), 0 2px 4px rgba(0, 0, 0, 0.08);
+      position: relative;
+      user-select: none;
+    }
+
+    .today-btn:hover {
+      background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+      border-color: #1E3A8A;
+      color: #ffffff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.48), 0 3px 6px rgba(0, 0, 0, 0.12);
+    }
+
+    .today-btn:hover .today-btn-icon {
+      transform: scale(1.2) rotate(-6deg);
+    }
+
+    .today-btn:active {
+      transform: translateY(1px) scale(0.99);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+    }
+
+    .today-btn:focus-visible {
+      outline: 3px solid #60A5FA;
+      outline-offset: 2px;
+    }
+
+    .today-btn-icon {
+      font-size: 16px;
+      display: inline-block;
+      transition: transform .2s ease;
+    }
+
+    /* ---------- Modal de Atividades do Dia ---------- */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(38, 55, 79, 0.52);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease, visibility .25s ease;
+    }
+
+    .modal-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      position: relative;
+      background: var(--paper);
+      border-radius: 12px;
+      box-shadow: 0 22px 50px rgba(38, 55, 79, 0.28), 0 2px 4px rgba(0, 0, 0, 0.06);
+      max-width: 620px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 22px 20px 48px;
+      overflow: hidden;
+      transform: scale(0.94) translateY(12px);
+      transition: transform .25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.is-open .modal-card {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-card::before {
+      content: "";
+      position: absolute;
+      left: 32px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--margin-red);
+      opacity: 0.5;
+    }
+
+    .holes-modal {
+      position: absolute;
+      left: 11px;
+      top: 0;
+      bottom: 0;
+      width: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .holes-modal span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #EFE8D8;
+      box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.16);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px dashed var(--paper-line);
+      margin-bottom: 8px;
+    }
+
+    .modal-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--margin-red);
+      margin: 0 0 4px;
+      font-weight: 700;
+    }
+
+    .modal-title {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 32px;
+      line-height: 1.1;
+      margin: 0;
+      color: var(--ink);
+      transform: rotate(-0.5deg);
+    }
+
+    .modal-close {
+      background: #fff;
+      border: 1.5px solid var(--paper-line);
+      color: var(--ink-soft);
+      font-size: 15px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all .15s ease;
+      flex-shrink: 0;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+    }
+
+    .modal-close:hover {
+      background: var(--paper-line);
+      color: var(--ink);
+      border-color: var(--ink-soft);
+    }
+
+    .modal-close:focus-visible {
+      outline: 2px solid var(--cat-licao);
+      outline-offset: 2px;
+    }
+
+    .modal-body {
+      overflow-y: auto;
+      padding-right: 6px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb {
+      background: var(--paper-line);
+      border-radius: 999px;
+    }
+
+    .modal-body::-webkit-scrollbar-thumb:hover {
+      background: var(--ink-soft);
+    }
+
+    .modal-empty {
+      padding: 34px 16px;
+      text-align: center;
+      color: var(--ink-soft);
+    }
+
+    .modal-empty-emoji {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    .modal-empty-title {
+      font-family: 'Patrick Hand', cursive;
+      font-size: 24px;
+      color: var(--ink);
+      margin: 0 0 6px;
+    }
+
+    .modal-empty-desc {
+      font-size: 14.5px;
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    @media (max-width:560px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      header.cover {
+        padding: 26px 18px 22px 46px;
+      }
+
+      .sheet {
+        padding: 6px 12px 10px 40px;
+      }
+
+      .item {
+        grid-template-columns: 22px 64px 1fr;
+        gap: 6px 10px;
+      }
+
+      .modal-card {
+        padding: 20px 14px 16px 38px;
+      }
+
+      .modal-card::before {
+        left: 26px;
+      }
+
+      .holes-modal {
+        left: 8px;
+      }
+
+      .modal-title {
+        font-size: 26px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="page-wrap">
+  <div class="page-wrap">
 
-  <header class="cover">
-    <div class="holes"><span></span><span></span><span></span><span></span><span></span></div>
-    <p class="eyebrow">Caderno de tarefas</p>
-    <h1>Cronograma do Tiago</h1>
-    <div class="meta-row" id="metaRow">
-      <span><b>Aluno:</b> —</span>
-      <span><b>Turma:</b> —</span>
-      <span><b>Professora:</b> —</span>
-    </div>
-  </header>
-
-  <div class="controls">
-    <div class="search-row">
-      <input type="search" id="searchInput" placeholder="Buscar por disciplina, data ou palavra-chave...">
-    </div>
-    <button type="button" class="filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="categoryChips">
-      <span class="arrow">▶</span>
-      <span>Filtrar por categoria</span>
-    </button>
-    <div class="chip-row" id="categoryChips"></div>
-    <div class="toggle-row">
-      <label class="hide-done-toggle">
-        <input type="checkbox" id="hideDoneToggle" checked>
-        <span>Ocultar itens já realizados</span>
-      </label>
-      <span class="stat-line" id="statLine"></span>
-    </div>
-  </div>
-
-  <div class="today-action-row">
-    <button type="button" class="today-btn" id="todayBtn">
-      <span class="today-btn-icon">📅</span>
-      <span>Ver atividades do dia</span>
-    </button>
-  </div>
-
-  <div id="listContainer"></div>
-
-  <footer class="repo-footer">
-    <span id="lastUpdateNote">Consultando a última atualização no GitHub…</span>
-  </footer>
-
-</div>
-
-<div class="modal-backdrop" id="todayModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
-  <div class="modal-card">
-    <div class="holes-modal"><span></span><span></span><span></span><span></span><span></span></div>
-    <div class="modal-header">
-      <div>
-        <p class="modal-eyebrow" id="modalEyebrow">Hoje</p>
-        <h2 class="modal-title" id="modalTitle">Atividades do Dia</h2>
+    <header class="cover">
+      <div class="holes"><span></span><span></span><span></span><span></span><span></span></div>
+      <p class="eyebrow">Caderno de tarefas</p>
+      <h1>Cronograma do Tiago</h1>
+      <div class="meta-row" id="metaRow">
+        <span><b>Aluno:</b> —</span>
+        <span><b>Turma:</b> —</span>
+        <span><b>Professora:</b> —</span>
       </div>
-      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Fechar modal">✕</button>
+      <div>
+        <p id="lastUpdateNote">Consultando a última atualização...</p>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="search-row">
+        <input type="search" id="searchInput" placeholder="Buscar por disciplina, data ou palavra-chave...">
+      </div>
+      <button type="button" class="filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="categoryChips">
+        <span class="arrow">▶</span>
+        <span>Filtrar por categoria</span>
+      </button>
+      <div class="chip-row" id="categoryChips"></div>
+      <div class="toggle-row">
+        <label class="hide-done-toggle">
+          <input type="checkbox" id="hideDoneToggle" checked>
+          <span>Ocultar itens já realizados</span>
+        </label>
+        <span class="stat-line" id="statLine"></span>
+      </div>
     </div>
-    <div class="modal-body" id="modalBody"></div>
+
+    <div class="today-action-row">
+      <button type="button" class="today-btn" id="todayBtn">
+        <span class="today-btn-icon">📅</span>
+        <span>Ver atividades do dia</span>
+      </button>
+    </div>
+
+    <div id="listContainer"></div>
+
+    <footer class="repo-footer">
+
+    </footer>
+
   </div>
-</div>
 
-<div class="toast-container" id="toastContainer"></div>
+  <div class="modal-backdrop" id="todayModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <div class="holes-modal"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="modal-header">
+        <div>
+          <p class="modal-eyebrow" id="modalEyebrow">Hoje</p>
+          <h2 class="modal-title" id="modalTitle">Atividades do Dia</h2>
+        </div>
+        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Fechar modal">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
 
-<script>
-(async function(){
+  <div class="toast-container" id="toastContainer"></div>
 
-  const CATEGORY_STYLE = {
-    "Lição de Casa":      {bg:"var(--cat-licao-bg)",     fg:"var(--cat-licao)"},
-    "Trabalho Bimestral": {bg:"var(--cat-trabalho-bg)",  fg:"var(--cat-trabalho)"},
-    "Evento Escolar":     {bg:"var(--cat-evento-bg)",    fg:"var(--cat-evento)"},
-    "Aula Suspensa":      {bg:"var(--cat-suspensa-bg)",  fg:"var(--cat-suspensa)"},
-    "Avaliação":          {bg:"var(--cat-avaliacao-bg)", fg:"var(--cat-avaliacao)"},
-    "Reunião":            {bg:"var(--cat-reuniao-bg)",   fg:"var(--cat-reuniao)"},
-    "Passeio":            {bg:"var(--cat-passeio-bg)",   fg:"var(--cat-passeio)"}
-  };
+  <script>
+    (async function () {
 
-  const MONTH_NAMES = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+      const CATEGORY_STYLE = {
+        "Lição de Casa": { bg: "var(--cat-licao-bg)", fg: "var(--cat-licao)" },
+        "Trabalho Bimestral": { bg: "var(--cat-trabalho-bg)", fg: "var(--cat-trabalho)" },
+        "Evento Escolar": { bg: "var(--cat-evento-bg)", fg: "var(--cat-evento)" },
+        "Aula Suspensa": { bg: "var(--cat-suspensa-bg)", fg: "var(--cat-suspensa)" },
+        "Avaliação": { bg: "var(--cat-avaliacao-bg)", fg: "var(--cat-avaliacao)" },
+        "Reunião": { bg: "var(--cat-reuniao-bg)", fg: "var(--cat-reuniao)" },
+        "Passeio": { bg: "var(--cat-passeio-bg)", fg: "var(--cat-passeio)" }
+      };
 
-  const LS_DONE_KEY = 'cronograma-tiago:concluidas';
-  const LS_HIDE_KEY = 'cronograma-tiago:ocultar-concluidas';
-  const LS_FILTERS_KEY = 'cronograma-tiago:filtros-expandidos';
-  let storageAvailable = true;
+      const MONTH_NAMES = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-  function loadDoneIds(){
-    try{
-      const raw = localStorage.getItem(LS_DONE_KEY);
-      return new Set(raw ? JSON.parse(raw) : []);
-    }catch(err){
-      storageAvailable = false;
-      console.warn('localStorage indisponível; o progresso não será salvo entre visitas.', err);
-      return new Set();
-    }
-  }
-  function saveDoneIds(doneSet){
-    try{
-      localStorage.setItem(LS_DONE_KEY, JSON.stringify([...doneSet]));
-    }catch(err){
-      storageAvailable = false;
-    }
-  }
-  function loadHidePref(defaultVal){
-    try{
-      const raw = localStorage.getItem(LS_HIDE_KEY);
-      return raw === null ? defaultVal : raw === '1';
-    }catch(err){
-      return defaultVal;
-    }
-  }
-  function saveHidePref(val){
-    try{
-      localStorage.setItem(LS_HIDE_KEY, val ? '1' : '0');
-    }catch(err){ /* ignore */ }
-  }
-  function loadFiltersPref(){
-    try{
-      return localStorage.getItem(LS_FILTERS_KEY) === '1';
-    }catch(err){
-      return false;
-    }
-  }
-  function saveFiltersPref(val){
-    try{
-      localStorage.setItem(LS_FILTERS_KEY, val ? '1' : '0');
-    }catch(err){ /* ignore */ }
-  }
+      const LS_DONE_KEY = 'cronograma-tiago:concluidas';
+      const LS_HIDE_KEY = 'cronograma-tiago:ocultar-concluidas';
+      const LS_FILTERS_KEY = 'cronograma-tiago:filtros-expandidos';
+      let storageAvailable = true;
 
-  const FADE_DELAY_MS = 1000;   // espera antes de iniciar o fade-out
-  const FADE_DURATION_MS = 420; // duração da transição CSS do fade-out (ver .item transition)
-  const TOAST_DURATION_MS = 6000;
-  const pendingTimers = new Map(); // itemId -> { waitTimer, fadeTimer }
-  const toastTimers = new Map();   // itemId -> { el, timeout }
-  const toastContainer = document.getElementById('toastContainer');
-
-  // ---- Rodapé: data/hora do último push no repositório GitHub ----
-  const REPO_OWNER = 'sambuichi-br';
-  const REPO_NAME = 'cronograma-atividades-tiago';
-  const lastUpdateEl = document.getElementById('lastUpdateNote');
-
-  async function loadLastPushInfo(){
-    try{
-      const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`, {
-        headers: { 'Accept': 'application/vnd.github+json' }
-      });
-      if(!res.ok) throw new Error('HTTP ' + res.status);
-      const repoInfo = await res.json();
-      if(!repoInfo.pushed_at) throw new Error('Campo pushed_at ausente na resposta da API');
-
-      const formatted = new Intl.DateTimeFormat('pt-BR', {
-        dateStyle: 'long',
-        timeStyle: 'short',
-        timeZone: 'America/Sao_Paulo'
-      }).format(new Date(repoInfo.pushed_at));
-
-      lastUpdateEl.textContent = `Última atualização: ${formatted}`;
-    }catch(err){
-      console.warn('Não foi possível obter a data do último push no GitHub.', err);
-      lastUpdateEl.textContent = 'Não foi possível carregar a data da última atualização.';
-    }
-  }
-  loadLastPushInfo();
-
-  let data = null;
-  try{
-    const res = await fetch('atividades.json', {cache:"no-store"});
-    if(!res.ok) throw new Error("HTTP " + res.status);
-    data = await res.json();
-  }catch(err){
-    console.error("Não foi possível carregar atividades.json.", err);
-    data = { aluno: "Tiago", ano: "2º Ano", professora: "Profª. Fernanda", atividades: [] };
-  }
-
-  const doneIds = loadDoneIds();
-  const activities = (data.atividades || []).map((a, i) => ({
-    ...a,
-    _id: a.id || String(i),
-    _done: doneIds.has(a.id || String(i))
-  }));
-
-  // ---- Cabeçalho ----
-  document.getElementById('metaRow').innerHTML = `
-    <span><b>Aluno:</b> ${escapeHtml(data.aluno||'—')}</span>
-    <span><b>Turma:</b> ${escapeHtml(data.ano||'—')}</span>
-    <span><b>Professora:</b> ${escapeHtml(data.professora||'—')}</span>
-  `;
-
-  // ---- Chips de categoria ----
-  const categories = [...new Set(activities.map(a=>a.categoria))];
-  const chipRow = document.getElementById('categoryChips');
-  const state = {
-    activeCategories: new Set(categories),
-    query: "",
-    hideDone: loadHidePref(true)
-  };
-
-  const filterToggle = document.getElementById('filterToggle');
-  const chipRowEl = document.getElementById('categoryChips');
-  let filtersExpanded = loadFiltersPref();
-  function applyFilterExpanded(){
-    filterToggle.setAttribute('aria-expanded', filtersExpanded ? 'true' : 'false');
-    chipRowEl.classList.toggle('expanded', filtersExpanded);
-  }
-  applyFilterExpanded();
-  filterToggle.addEventListener('click', () => {
-    filtersExpanded = !filtersExpanded;
-    saveFiltersPref(filtersExpanded);
-    applyFilterExpanded();
-  });
-
-  const hideDoneToggle = document.getElementById('hideDoneToggle');
-  hideDoneToggle.checked = state.hideDone;
-  hideDoneToggle.addEventListener('change', (e) => {
-    state.hideDone = e.target.checked;
-    saveHidePref(state.hideDone);
-    render();
-  });
-
-  function makeChip(label, isAll){
-    const el = document.createElement('button');
-    el.className = 'chip';
-    el.type = 'button';
-    el.textContent = label;
-    el.setAttribute('aria-pressed', 'true');
-    el.addEventListener('click', () => {
-      if(isAll){
-        state.activeCategories = new Set(categories);
-        [...chipRow.querySelectorAll('.chip')].forEach(c => c.setAttribute('aria-pressed','true'));
-      } else {
-        if(state.activeCategories.has(label)){
-          state.activeCategories.delete(label);
-          el.setAttribute('aria-pressed','false');
-        } else {
-          state.activeCategories.add(label);
-          el.setAttribute('aria-pressed','true');
+      function loadDoneIds() {
+        try {
+          const raw = localStorage.getItem(LS_DONE_KEY);
+          return new Set(raw ? JSON.parse(raw) : []);
+        } catch (err) {
+          storageAvailable = false;
+          console.warn('localStorage indisponível; o progresso não será salvo entre visitas.', err);
+          return new Set();
         }
       }
-      render();
-    });
-    return el;
-  }
-  chipRow.appendChild(makeChip('Todas', true));
-  categories.forEach(c => chipRow.appendChild(makeChip(c, false)));
-
-  document.getElementById('searchInput').addEventListener('input', (e) => {
-    state.query = e.target.value.trim().toLowerCase();
-    render();
-  });
-
-  const listContainer = document.getElementById('listContainer');
-  const statLine = document.getElementById('statLine');
-
-  function escapeHtml(str){
-    return String(str).replace(/[&<>"']/g, s => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-    }[s]));
-  }
-
-  function monthLabelFromISO(iso){
-    if(!iso) return "";
-    const [y,m] = iso.split('-');
-    return MONTH_NAMES[parseInt(m,10)-1] + " de " + y;
-  }
-
-  function getYesterdayISO() {
-    const d = new Date();
-    d.setDate(d.getDate() - 1);
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    return `${y}-${m}-${day}`;
-  }
-
-  function getTodayISO() {
-    const d = new Date();
-    const y = d.getFullYear();
-    const m = String(d.getMonth() + 1).padStart(2, '0');
-    const day = String(d.getDate()).padStart(2, '0');
-    return `${y}-${m}-${day}`;
-  }
-
-  function matches(a){
-    if(!state.activeCategories.has(a.categoria)) return false;
-    if(state.hideDone && a._done) return false;
-    // Oculta automaticamente as atividades anteriores ao dia atual - 1 (a menos que haja termo de busca)
-    const cutoff = getYesterdayISO();
-    if(!state.query && a.dataOrdenacao && a.dataOrdenacao < cutoff) return false;
-    if(!state.query) return true;
-    const hay = [a.data, a.categoria, a.disciplina, a.titulo, a.descricao].join(' ').toLowerCase();
-    return hay.includes(state.query);
-  }
-
-  function updateStatLine(){
-    const filtered = activities.filter(matches);
-    const doneCount = activities.filter(a => a._done).length;
-    statLine.textContent = filtered.length === activities.length
-      ? `${activities.length} atividades no período letivo.`
-      : `${filtered.length} de ${activities.length} atividades${doneCount ? ` (${doneCount} concluídas)` : ''}.`;
-  }
-
-  function render(){
-    const filtered = activities.filter(matches).sort((x,y) => (x.dataOrdenacao||'').localeCompare(y.dataOrdenacao||''));
-
-    updateStatLine();
-
-    listContainer.innerHTML = "";
-
-    if(filtered.length === 0){
-      const empty = document.createElement('div');
-      empty.className = 'sheet';
-      const visibleIgnoringDone = activities.filter(a => {
-        if(!state.activeCategories.has(a.categoria)) return false;
-        const cutoff = getYesterdayISO();
-        if(!state.query && a.dataOrdenacao && a.dataOrdenacao < cutoff) return false;
-        if(!state.query) return true;
-        const hay = [a.data, a.categoria, a.disciplina, a.titulo, a.descricao].join(' ').toLowerCase();
-        return hay.includes(state.query);
-      }).length;
-      const msg = (state.hideDone && visibleIgnoringDone > 0)
-        ? "Tudo concluído por aqui! Desative \u201cOcultar itens já realizados\u201d para rever a lista completa."
-        : "Nenhuma atividade encontrada. Tente ajustar a busca ou reativar uma categoria.";
-      empty.innerHTML = `<div class="empty-state">${msg}</div>`;
-      listContainer.appendChild(empty);
-      return;
-    }
-
-    let currentMonth = null;
-    let sheet = null;
-
-    filtered.forEach(a => {
-      const monthKey = (a.dataOrdenacao||'').slice(0,7);
-      if(monthKey !== currentMonth){
-        currentMonth = monthKey;
-        const divider = document.createElement('div');
-        divider.className = 'month-divider';
-        divider.innerHTML = `<span class="label">${monthLabelFromISO(a.dataOrdenacao)}</span><span class="rule"></span>`;
-        listContainer.appendChild(divider);
-
-        sheet = document.createElement('div');
-        sheet.className = 'sheet';
-        sheet.innerHTML = `<div class="holes-sheet"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>`;
-        listContainer.appendChild(sheet);
+      function saveDoneIds(doneSet) {
+        try {
+          localStorage.setItem(LS_DONE_KEY, JSON.stringify([...doneSet]));
+        } catch (err) {
+          storageAvailable = false;
+        }
+      }
+      function loadHidePref(defaultVal) {
+        try {
+          const raw = localStorage.getItem(LS_HIDE_KEY);
+          return raw === null ? defaultVal : raw === '1';
+        } catch (err) {
+          return defaultVal;
+        }
+      }
+      function saveHidePref(val) {
+        try {
+          localStorage.setItem(LS_HIDE_KEY, val ? '1' : '0');
+        } catch (err) { /* ignore */ }
+      }
+      function loadFiltersPref() {
+        try {
+          return localStorage.getItem(LS_FILTERS_KEY) === '1';
+        } catch (err) {
+          return false;
+        }
+      }
+      function saveFiltersPref(val) {
+        try {
+          localStorage.setItem(LS_FILTERS_KEY, val ? '1' : '0');
+        } catch (err) { /* ignore */ }
       }
 
-      const style = CATEGORY_STYLE[a.categoria] || {bg:"#eee", fg:"#555"};
-      const row = document.createElement('div');
-      row.className = 'item' + (a._done ? ' is-done' : '');
-      row.dataset.itemId = a._id;
+      const FADE_DELAY_MS = 1000;   // espera antes de iniciar o fade-out
+      const FADE_DURATION_MS = 420; // duração da transição CSS do fade-out (ver .item transition)
+      const TOAST_DURATION_MS = 6000;
+      const pendingTimers = new Map(); // itemId -> { waitTimer, fadeTimer }
+      const toastTimers = new Map();   // itemId -> { el, timeout }
+      const toastContainer = document.getElementById('toastContainer');
 
-      const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
-      const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
+      // ---- Rodapé: data/hora do último push no repositório GitHub ----
+      const REPO_OWNER = 'sambuichi-br';
+      const REPO_NAME = 'cronograma-atividades-tiago';
+      const lastUpdateEl = document.getElementById('lastUpdateNote');
 
-      row.innerHTML = `
+      async function loadLastPushInfo() {
+        try {
+          const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}`, {
+            headers: { 'Accept': 'application/vnd.github+json' }
+          });
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          const repoInfo = await res.json();
+          if (!repoInfo.pushed_at) throw new Error('Campo pushed_at ausente na resposta da API');
+
+          const formatted = new Intl.DateTimeFormat('pt-BR', {
+            dateStyle: 'long',
+            timeStyle: 'short',
+            timeZone: 'America/Sao_Paulo'
+          }).format(new Date(repoInfo.pushed_at));
+
+          lastUpdateEl.textContent = `Última atualização: ${formatted}`;
+        } catch (err) {
+          console.warn('Não foi possível obter a data do último push no GitHub.', err);
+          lastUpdateEl.textContent = 'Não foi possível carregar a data da última atualização.';
+        }
+      }
+      loadLastPushInfo();
+
+      let data = null;
+      try {
+        const res = await fetch('atividades.json', { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        data = await res.json();
+      } catch (err) {
+        console.error("Não foi possível carregar atividades.json.", err);
+        data = { aluno: "Tiago", ano: "2º Ano", professora: "Profª. Fernanda", atividades: [] };
+      }
+
+      const doneIds = loadDoneIds();
+      const activities = (data.atividades || []).map((a, i) => ({
+        ...a,
+        _id: a.id || String(i),
+        _done: doneIds.has(a.id || String(i))
+      }));
+
+      // ---- Cabeçalho ----
+      document.getElementById('metaRow').innerHTML = `
+    <span><b>Aluno:</b> ${escapeHtml(data.aluno || '—')}</span>
+    <span><b>Turma:</b> ${escapeHtml(data.ano || '—')}</span>
+    <span><b>Professora:</b> ${escapeHtml(data.professora || '—')}</span>
+  `;
+
+      // ---- Chips de categoria ----
+      const categories = [...new Set(activities.map(a => a.categoria))];
+      const chipRow = document.getElementById('categoryChips');
+      const state = {
+        activeCategories: new Set(categories),
+        query: "",
+        hideDone: loadHidePref(true)
+      };
+
+      const filterToggle = document.getElementById('filterToggle');
+      const chipRowEl = document.getElementById('categoryChips');
+      let filtersExpanded = loadFiltersPref();
+      function applyFilterExpanded() {
+        filterToggle.setAttribute('aria-expanded', filtersExpanded ? 'true' : 'false');
+        chipRowEl.classList.toggle('expanded', filtersExpanded);
+      }
+      applyFilterExpanded();
+      filterToggle.addEventListener('click', () => {
+        filtersExpanded = !filtersExpanded;
+        saveFiltersPref(filtersExpanded);
+        applyFilterExpanded();
+      });
+
+      const hideDoneToggle = document.getElementById('hideDoneToggle');
+      hideDoneToggle.checked = state.hideDone;
+      hideDoneToggle.addEventListener('change', (e) => {
+        state.hideDone = e.target.checked;
+        saveHidePref(state.hideDone);
+        render();
+      });
+
+      function makeChip(label, isAll) {
+        const el = document.createElement('button');
+        el.className = 'chip';
+        el.type = 'button';
+        el.textContent = label;
+        el.setAttribute('aria-pressed', 'true');
+        el.addEventListener('click', () => {
+          if (isAll) {
+            state.activeCategories = new Set(categories);
+            [...chipRow.querySelectorAll('.chip')].forEach(c => c.setAttribute('aria-pressed', 'true'));
+          } else {
+            if (state.activeCategories.has(label)) {
+              state.activeCategories.delete(label);
+              el.setAttribute('aria-pressed', 'false');
+            } else {
+              state.activeCategories.add(label);
+              el.setAttribute('aria-pressed', 'true');
+            }
+          }
+          render();
+        });
+        return el;
+      }
+      chipRow.appendChild(makeChip('Todas', true));
+      categories.forEach(c => chipRow.appendChild(makeChip(c, false)));
+
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        state.query = e.target.value.trim().toLowerCase();
+        render();
+      });
+
+      const listContainer = document.getElementById('listContainer');
+      const statLine = document.getElementById('statLine');
+
+      function escapeHtml(str) {
+        return String(str).replace(/[&<>"']/g, s => ({
+          '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[s]));
+      }
+
+      function monthLabelFromISO(iso) {
+        if (!iso) return "";
+        const [y, m] = iso.split('-');
+        return MONTH_NAMES[parseInt(m, 10) - 1] + " de " + y;
+      }
+
+      function getYesterdayISO() {
+        const d = new Date();
+        d.setDate(d.getDate() - 1);
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${y}-${m}-${day}`;
+      }
+
+      function getTodayISO() {
+        const d = new Date();
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${y}-${m}-${day}`;
+      }
+
+      function matches(a) {
+        if (!state.activeCategories.has(a.categoria)) return false;
+        if (state.hideDone && a._done) return false;
+        // Oculta automaticamente as atividades anteriores ao dia atual - 1 (a menos que haja termo de busca)
+        const cutoff = getYesterdayISO();
+        if (!state.query && a.dataOrdenacao && a.dataOrdenacao < cutoff) return false;
+        if (!state.query) return true;
+        const hay = [a.data, a.categoria, a.disciplina, a.titulo, a.descricao].join(' ').toLowerCase();
+        return hay.includes(state.query);
+      }
+
+      function updateStatLine() {
+        const filtered = activities.filter(matches);
+        const doneCount = activities.filter(a => a._done).length;
+        statLine.textContent = filtered.length === activities.length
+          ? `${activities.length} atividades no período letivo.`
+          : `${filtered.length} de ${activities.length} atividades${doneCount ? ` (${doneCount} concluídas)` : ''}.`;
+      }
+
+      function render() {
+        const filtered = activities.filter(matches).sort((x, y) => (x.dataOrdenacao || '').localeCompare(y.dataOrdenacao || ''));
+
+        updateStatLine();
+
+        listContainer.innerHTML = "";
+
+        if (filtered.length === 0) {
+          const empty = document.createElement('div');
+          empty.className = 'sheet';
+          const visibleIgnoringDone = activities.filter(a => {
+            if (!state.activeCategories.has(a.categoria)) return false;
+            const cutoff = getYesterdayISO();
+            if (!state.query && a.dataOrdenacao && a.dataOrdenacao < cutoff) return false;
+            if (!state.query) return true;
+            const hay = [a.data, a.categoria, a.disciplina, a.titulo, a.descricao].join(' ').toLowerCase();
+            return hay.includes(state.query);
+          }).length;
+          const msg = (state.hideDone && visibleIgnoringDone > 0)
+            ? "Tudo concluído por aqui! Desative \u201cOcultar itens já realizados\u201d para rever a lista completa."
+            : "Nenhuma atividade encontrada. Tente ajustar a busca ou reativar uma categoria.";
+          empty.innerHTML = `<div class="empty-state">${msg}</div>`;
+          listContainer.appendChild(empty);
+          return;
+        }
+
+        let currentMonth = null;
+        let sheet = null;
+
+        filtered.forEach(a => {
+          const monthKey = (a.dataOrdenacao || '').slice(0, 7);
+          if (monthKey !== currentMonth) {
+            currentMonth = monthKey;
+            const divider = document.createElement('div');
+            divider.className = 'month-divider';
+            divider.innerHTML = `<span class="label">${monthLabelFromISO(a.dataOrdenacao)}</span><span class="rule"></span>`;
+            listContainer.appendChild(divider);
+
+            sheet = document.createElement('div');
+            sheet.className = 'sheet';
+            sheet.innerHTML = `<div class="holes-sheet"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>`;
+            listContainer.appendChild(sheet);
+          }
+
+          const style = CATEGORY_STYLE[a.categoria] || { bg: "#eee", fg: "#555" };
+          const row = document.createElement('div');
+          row.className = 'item' + (a._done ? ' is-done' : '');
+          row.dataset.itemId = a._id;
+
+          const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
+          const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
+
+          row.innerHTML = `
         <input type="checkbox" class="check" ${a._done ? 'checked' : ''} aria-label="Marcar como concluída">
         <div class="date-block">${escapeHtml(a.data)}${a.diaSemana ? `<span class="dow">${escapeHtml(a.diaSemana)}</span>` : ''}</div>
         <div class="item-body">
@@ -1061,234 +1258,234 @@
         </div>
       `;
 
-      row.querySelector('.check').addEventListener('change', (e) => {
-        if(e.target.checked){
-          markDone(a, row);
-        } else {
-          unmarkDone(a, row);
+          row.querySelector('.check').addEventListener('change', (e) => {
+            if (e.target.checked) {
+              markDone(a, row);
+            } else {
+              unmarkDone(a, row);
+            }
+          });
+
+          sheet.appendChild(row);
+        });
+      }
+
+      function findRow(itemId) {
+        return [...listContainer.querySelectorAll('.item')].find(el => el.dataset.itemId === itemId);
+      }
+
+      function cancelPendingHide(itemId) {
+        const t = pendingTimers.get(itemId);
+        if (t) {
+          clearTimeout(t.waitTimer);
+          clearTimeout(t.fadeTimer);
+          pendingTimers.delete(itemId);
         }
-      });
+      }
 
-      sheet.appendChild(row);
-    });
-  }
+      function markDone(a, row) {
+        a._done = true;
+        doneIds.add(a._id);
+        saveDoneIds(doneIds);
+        cancelPendingHide(a._id);
 
-  function findRow(itemId){
-    return [...listContainer.querySelectorAll('.item')].find(el => el.dataset.itemId === itemId);
-  }
+        if (row) row.classList.add('is-done');
 
-  function cancelPendingHide(itemId){
-    const t = pendingTimers.get(itemId);
-    if(t){
-      clearTimeout(t.waitTimer);
-      clearTimeout(t.fadeTimer);
-      pendingTimers.delete(itemId);
-    }
-  }
+        const mainRow = findRow(a._id);
+        if (mainRow && mainRow !== row) {
+          mainRow.classList.add('is-done');
+          const cb = mainRow.querySelector('.check');
+          if (cb) cb.checked = true;
+        }
 
-  function markDone(a, row){
-    a._done = true;
-    doneIds.add(a._id);
-    saveDoneIds(doneIds);
-    cancelPendingHide(a._id);
+        const modalRow = modalBody ? modalBody.querySelector(`.item[data-item-id="${a._id}"]`) : null;
+        if (modalRow && modalRow !== row) {
+          modalRow.classList.add('is-done');
+          const cb = modalRow.querySelector('.check');
+          if (cb) cb.checked = true;
+        }
 
-    if(row) row.classList.add('is-done');
+        updateStatLine();
 
-    const mainRow = findRow(a._id);
-    if(mainRow && mainRow !== row){
-      mainRow.classList.add('is-done');
-      const cb = mainRow.querySelector('.check');
-      if(cb) cb.checked = true;
-    }
+        if (!state.hideDone) {
+          // "Ocultar concluídas" está desligado: o item permanece visível, só marcado.
+          return;
+        }
 
-    const modalRow = modalBody ? modalBody.querySelector(`.item[data-item-id="${a._id}"]`) : null;
-    if(modalRow && modalRow !== row){
-      modalRow.classList.add('is-done');
-      const cb = modalRow.querySelector('.check');
-      if(cb) cb.checked = true;
-    }
+        const rowToAnimate = mainRow || (row !== modalRow ? row : null);
+        if (rowToAnimate) {
+          const waitTimer = setTimeout(() => {
+            rowToAnimate.classList.add('row-fade-out');
+            showUndoToast(a);
+            const fadeTimer = setTimeout(() => {
+              pendingTimers.delete(a._id);
+              if (a._done && state.hideDone) {
+                render();
+              }
+            }, FADE_DURATION_MS);
+            pendingTimers.set(a._id, { waitTimer: null, fadeTimer });
+          }, FADE_DELAY_MS);
+          pendingTimers.set(a._id, { waitTimer, fadeTimer: null });
+        } else {
+          showUndoToast(a);
+        }
+      }
 
-    updateStatLine();
+      function unmarkDone(a, row) {
+        cancelPendingHide(a._id);
+        a._done = false;
+        doneIds.delete(a._id);
+        saveDoneIds(doneIds);
 
-    if(!state.hideDone){
-      // "Ocultar concluídas" está desligado: o item permanece visível, só marcado.
-      return;
-    }
+        if (row) row.classList.remove('is-done', 'row-fade-out');
 
-    const rowToAnimate = mainRow || (row !== modalRow ? row : null);
-    if(rowToAnimate){
-      const waitTimer = setTimeout(() => {
-        rowToAnimate.classList.add('row-fade-out');
-        showUndoToast(a);
-        const fadeTimer = setTimeout(() => {
-          pendingTimers.delete(a._id);
-          if(a._done && state.hideDone){
-            render();
-          }
-        }, FADE_DURATION_MS);
-        pendingTimers.set(a._id, {waitTimer:null, fadeTimer});
-      }, FADE_DELAY_MS);
-      pendingTimers.set(a._id, {waitTimer, fadeTimer:null});
-    } else {
-      showUndoToast(a);
-    }
-  }
+        const mainRow = findRow(a._id);
+        if (mainRow && mainRow !== row) {
+          mainRow.classList.remove('is-done', 'row-fade-out');
+          const cb = mainRow.querySelector('.check');
+          if (cb) cb.checked = false;
+        }
 
-  function unmarkDone(a, row){
-    cancelPendingHide(a._id);
-    a._done = false;
-    doneIds.delete(a._id);
-    saveDoneIds(doneIds);
+        const modalRow = modalBody ? modalBody.querySelector(`.item[data-item-id="${a._id}"]`) : null;
+        if (modalRow && modalRow !== row) {
+          modalRow.classList.remove('is-done');
+          const cb = modalRow.querySelector('.check');
+          if (cb) cb.checked = false;
+        }
 
-    if(row) row.classList.remove('is-done', 'row-fade-out');
+        dismissToast(a._id);
+        updateStatLine();
 
-    const mainRow = findRow(a._id);
-    if(mainRow && mainRow !== row){
-      mainRow.classList.remove('is-done', 'row-fade-out');
-      const cb = mainRow.querySelector('.check');
-      if(cb) cb.checked = false;
-    }
+        if (state.hideDone && !mainRow) {
+          render();
+        }
+      }
 
-    const modalRow = modalBody ? modalBody.querySelector(`.item[data-item-id="${a._id}"]`) : null;
-    if(modalRow && modalRow !== row){
-      modalRow.classList.remove('is-done');
-      const cb = modalRow.querySelector('.check');
-      if(cb) cb.checked = false;
-    }
+      function undoItem(itemId) {
+        cancelPendingHide(itemId);
+        const a = activities.find(x => x._id === itemId);
+        if (!a) return;
+        a._done = false;
+        doneIds.delete(itemId);
+        saveDoneIds(doneIds);
+        dismissToast(itemId);
 
-    dismissToast(a._id);
-    updateStatLine();
+        const modalRow = modalBody ? modalBody.querySelector(`.item[data-item-id="${itemId}"]`) : null;
+        if (modalRow) {
+          modalRow.classList.remove('is-done');
+          const cb = modalRow.querySelector('.check');
+          if (cb) cb.checked = false;
+        }
 
-    if(state.hideDone && !mainRow){
-      render();
-    }
-  }
+        const row = findRow(itemId);
+        if (row) {
+          row.classList.remove('is-done', 'row-fade-out');
+          const cb = row.querySelector('.check');
+          if (cb) cb.checked = false;
+        } else {
+          // a linha já saiu do DOM (fade concluído + relistagem) — reconstrói a lista
+          render();
+        }
+        updateStatLine();
+      }
 
-  function undoItem(itemId){
-    cancelPendingHide(itemId);
-    const a = activities.find(x => x._id === itemId);
-    if(!a) return;
-    a._done = false;
-    doneIds.delete(itemId);
-    saveDoneIds(doneIds);
-    dismissToast(itemId);
-
-    const modalRow = modalBody ? modalBody.querySelector(`.item[data-item-id="${itemId}"]`) : null;
-    if(modalRow){
-      modalRow.classList.remove('is-done');
-      const cb = modalRow.querySelector('.check');
-      if(cb) cb.checked = false;
-    }
-
-    const row = findRow(itemId);
-    if(row){
-      row.classList.remove('is-done', 'row-fade-out');
-      const cb = row.querySelector('.check');
-      if(cb) cb.checked = false;
-    } else {
-      // a linha já saiu do DOM (fade concluído + relistagem) — reconstrói a lista
-      render();
-    }
-    updateStatLine();
-  }
-
-  function showUndoToast(a){
-    dismissToast(a._id);
-    const toast = document.createElement('div');
-    toast.className = 'undo-toast';
-    toast.dataset.toastId = a._id;
-    const label = a.titulo ? a.titulo : `${a.disciplina} — ${a.categoria}`;
-    toast.innerHTML = `
+      function showUndoToast(a) {
+        dismissToast(a._id);
+        const toast = document.createElement('div');
+        toast.className = 'undo-toast';
+        toast.dataset.toastId = a._id;
+        const label = a.titulo ? a.titulo : `${a.disciplina} — ${a.categoria}`;
+        toast.innerHTML = `
       <span class="undo-toast-text">“${escapeHtml(label)}” marcada como concluída.</span>
       <button type="button" class="undo-btn">Desfazer</button>
     `;
-    toast.querySelector('.undo-btn').addEventListener('click', () => undoItem(a._id));
-    toastContainer.appendChild(toast);
-    requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add('show')));
+        toast.querySelector('.undo-btn').addEventListener('click', () => undoItem(a._id));
+        toastContainer.appendChild(toast);
+        requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add('show')));
 
-    const timeout = setTimeout(() => dismissToast(a._id), TOAST_DURATION_MS);
-    toastTimers.set(a._id, {el: toast, timeout});
-  }
+        const timeout = setTimeout(() => dismissToast(a._id), TOAST_DURATION_MS);
+        toastTimers.set(a._id, { el: toast, timeout });
+      }
 
-  function dismissToast(itemId){
-    const t = toastTimers.get(itemId);
-    if(!t) return;
-    clearTimeout(t.timeout);
-    t.el.classList.remove('show');
-    setTimeout(() => t.el.remove(), 250);
-    toastTimers.delete(itemId);
-  }
+      function dismissToast(itemId) {
+        const t = toastTimers.get(itemId);
+        if (!t) return;
+        clearTimeout(t.timeout);
+        t.el.classList.remove('show');
+        setTimeout(() => t.el.remove(), 250);
+        toastTimers.delete(itemId);
+      }
 
-  // ---- Modal de Atividades do Dia ----
-  const todayModal = document.getElementById('todayModal');
-  const todayBtn = document.getElementById('todayBtn');
-  const modalCloseBtn = document.getElementById('modalCloseBtn');
-  const modalBody = document.getElementById('modalBody');
-  const modalEyebrow = document.getElementById('modalEyebrow');
+      // ---- Modal de Atividades do Dia ----
+      const todayModal = document.getElementById('todayModal');
+      const todayBtn = document.getElementById('todayBtn');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const modalBody = document.getElementById('modalBody');
+      const modalEyebrow = document.getElementById('modalEyebrow');
 
-  function openTodayModal(){
-    renderModalActivities();
-    todayModal.hidden = false;
-    requestAnimationFrame(() => {
-      todayModal.classList.add('is-open');
-    });
-    document.body.style.overflow = 'hidden';
-    modalCloseBtn.focus();
-  }
+      function openTodayModal() {
+        renderModalActivities();
+        todayModal.hidden = false;
+        requestAnimationFrame(() => {
+          todayModal.classList.add('is-open');
+        });
+        document.body.style.overflow = 'hidden';
+        modalCloseBtn.focus();
+      }
 
-  function closeTodayModal(){
-    todayModal.classList.remove('is-open');
-    document.body.style.overflow = '';
-    setTimeout(() => {
-      todayModal.hidden = true;
-    }, 250);
-    todayBtn.focus();
-  }
+      function closeTodayModal() {
+        todayModal.classList.remove('is-open');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          todayModal.hidden = true;
+        }, 250);
+        todayBtn.focus();
+      }
 
-  todayBtn.addEventListener('click', openTodayModal);
-  modalCloseBtn.addEventListener('click', closeTodayModal);
-  todayModal.addEventListener('click', (e) => {
-    if(e.target === todayModal) closeTodayModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && !todayModal.hidden){
-      closeTodayModal();
-    }
-  });
+      todayBtn.addEventListener('click', openTodayModal);
+      modalCloseBtn.addEventListener('click', closeTodayModal);
+      todayModal.addEventListener('click', (e) => {
+        if (e.target === todayModal) closeTodayModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !todayModal.hidden) {
+          closeTodayModal();
+        }
+      });
 
-  function renderModalActivities(){
-    const todayISO = getTodayISO();
-    const todayActivities = activities.filter(a => a.dataOrdenacao === todayISO);
+      function renderModalActivities() {
+        const todayISO = getTodayISO();
+        const todayActivities = activities.filter(a => a.dataOrdenacao === todayISO);
 
-    const now = new Date();
-    const formattedWeekday = new Intl.DateTimeFormat('pt-BR', { weekday: 'long' }).format(now);
-    const formattedDate = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
-    const capWeekday = formattedWeekday.charAt(0).toUpperCase() + formattedWeekday.slice(1);
-    modalEyebrow.textContent = `Hoje • ${capWeekday}, ${formattedDate}`;
+        const now = new Date();
+        const formattedWeekday = new Intl.DateTimeFormat('pt-BR', { weekday: 'long' }).format(now);
+        const formattedDate = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' }).format(now);
+        const capWeekday = formattedWeekday.charAt(0).toUpperCase() + formattedWeekday.slice(1);
+        modalEyebrow.textContent = `Hoje • ${capWeekday}, ${formattedDate}`;
 
-    modalBody.innerHTML = '';
+        modalBody.innerHTML = '';
 
-    if(todayActivities.length === 0){
-      modalBody.innerHTML = `
+        if (todayActivities.length === 0) {
+          modalBody.innerHTML = `
         <div class="modal-empty">
           <div class="modal-empty-emoji">🎒</div>
           <p class="modal-empty-title">Nenhuma atividade para hoje!</p>
           <p class="modal-empty-desc">Não há tarefas ou eventos agendados para este dia.</p>
         </div>
       `;
-      return;
-    }
+          return;
+        }
 
-    todayActivities.forEach(a => {
-      const style = CATEGORY_STYLE[a.categoria] || {bg:"#eee", fg:"#555"};
-      const row = document.createElement('div');
-      row.className = 'item' + (a._done ? ' is-done' : '');
-      row.dataset.itemId = a._id;
+        todayActivities.forEach(a => {
+          const style = CATEGORY_STYLE[a.categoria] || { bg: "#eee", fg: "#555" };
+          const row = document.createElement('div');
+          row.className = 'item' + (a._done ? ' is-done' : '');
+          row.dataset.itemId = a._id;
 
-      const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
-      const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
+          const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
+          const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
 
-      row.innerHTML = `
+          row.innerHTML = `
         <input type="checkbox" class="check" ${a._done ? 'checked' : ''} aria-label="Marcar como concluída">
         <div class="date-block">${escapeHtml(a.data)}${a.diaSemana ? `<span class="dow">${escapeHtml(a.diaSemana)}</span>` : ''}</div>
         <div class="item-body">
@@ -1301,21 +1498,22 @@
         </div>
       `;
 
-      row.querySelector('.check').addEventListener('change', (e) => {
-        if(e.target.checked){
-          markDone(a, row);
-        } else {
-          unmarkDone(a, row);
-        }
-      });
+          row.querySelector('.check').addEventListener('change', (e) => {
+            if (e.target.checked) {
+              markDone(a, row);
+            } else {
+              unmarkDone(a, row);
+            }
+          });
 
-      modalBody.appendChild(row);
-    });
-  }
+          modalBody.appendChild(row);
+        });
+      }
 
-  render();
-})();
-</script>
+      render();
+    })();
+  </script>
 
 </body>
+
 </html>
