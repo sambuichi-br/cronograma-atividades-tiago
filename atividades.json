@@ -206,8 +206,8 @@
       "dataOrdenacao": "2026-09-10",
       "categoria": "Avaliação",
       "disciplina": "Português",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Interpretação de textos.\nSubstantivos: gêneros masculino e feminino páginas 21, 22, 23 e 24.\nArtigos: Femininos e masculinos páginas 26, 27, 28, 29 e 30.\nObrigado/obrigada: páginas 32, 33, 34 e 35.\nOrtografia: C ou QU? páginas 38, 39, 40, 41 e 42."
     },
     {
       "id": "2026-09-11_geral_avaliacao",
@@ -215,9 +215,9 @@
       "diaSemana": "Sex",
       "dataOrdenacao": "2026-09-11",
       "categoria": "Avaliação",
-      "disciplina": "Inglês",
-      "titulo": "Prova Escrita",
-      "descricao": "Avaliação Bimestral."
+      "disciplina": "Inglês (ESCRITA)",
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Cap.7 – páginas 86,89,90 e 94.\nCap. 8 – páginas 99,101 e 106.\nCap 9 – páginas 112,114, 120 e 121."
     },
     {
       "id": "2026-09-14_geral_avaliacao",
@@ -226,8 +226,8 @@
       "dataOrdenacao": "2026-09-14",
       "categoria": "Avaliação",
       "disciplina": "Matemática",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Mês e ano página 31. \nOrdenação de datas páginas 37.\nUnidades padronizadas páginas 51,52 e 53.\nMedidas padronizadas de massa páginas 63,64 e 65, 66,67.\nSituação problema.\nAdição."
     },
     {
       "id": "2026-09-15_geral_avaliacao",
@@ -236,8 +236,8 @@
       "dataOrdenacao": "2026-09-15",
       "categoria": "Avaliação",
       "disciplina": "História",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Como marcamos o tempo: o relógio páginas 17,18,19,20,23.\nComo marcamos o tempo: o calendário páginas 24,25, 26.\nTempo: como ele passa? Páginas 33,34,35,36.\nPassado, presente e futuro páginas 40,41,42,43."
     },
     {
       "id": "2026-09-15_geral_avaliacao2",
@@ -246,8 +246,8 @@
       "dataOrdenacao": "2026-09-15",
       "categoria": "Avaliação",
       "disciplina": "Artes",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Folclore\nVicent Van Gogh\n1 Tessalonicenses 5.21"
     },
     {
       "id": "2026-09-16_geral_avaliacao",
@@ -256,8 +256,8 @@
       "dataOrdenacao": "2026-09-16",
       "categoria": "Avaliação",
       "disciplina": "Ciências",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Luz e sombra páginas 13,14,15, 16, 17,20,21,22.\nAbsorção de calor páginas 36,37,38.\nA luz pode passar por todos os materiais? 40,41,42,43,44 e 45."
     },
     {
       "id": "2026-09-16_geral_avaliacao2",
@@ -265,9 +265,9 @@
       "diaSemana": "Qua",
       "dataOrdenacao": "2026-09-16",
       "categoria": "Avaliação",
-      "disciplina": "Inglês",
-      "titulo": "Prova Oral",
-      "descricao": "Avaliação Bimestral."
+      "disciplina": "Inglês (ORAL)",
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Cap.7 – páginas 86,89,90 e 94.\nCap. 8 – páginas 99,101 e 106.\nCap 9 – páginas 112,114, 120 e 121."
     },
     {
       "id": "2026-09-17_geral_avaliacao",
@@ -276,8 +276,8 @@
       "dataOrdenacao": "2026-09-17",
       "categoria": "Avaliação",
       "disciplina": "Geografia",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Meios de transporte páginas 13.\nRegras, sinalização de trânsito e acessibilidade página 23,24,25.\nZona urbana página 41 e 42.\nZona rural páginas 46,47.\nZona litorânea páginas 50,51"
     },
     {
       "id": "2026-09-17_geral_avaliacao2",
@@ -286,8 +286,8 @@
       "dataOrdenacao": "2026-09-17",
       "categoria": "Avaliação",
       "disciplina": "Educação Física",
-      "titulo": "",
-      "descricao": "Avaliação Bimestral."
+      "titulo": "Avaliação Bimestral",
+      "descricao": "Folclore - brincadeiras antigas.\nHigiene pessoal."
     },
     {
       "id": "2026-09-21_geral_recuperacao-e-substitutivas",
