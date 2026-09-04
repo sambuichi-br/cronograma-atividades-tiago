@@ -205,7 +205,7 @@
       "diaSemana": "Qui",
       "dataOrdenacao": "2026-09-10",
       "categoria": "Avaliação",
-      "disciplina": "Geral",
+      "disciplina": "Português",
       "titulo": "",
       "descricao": "Avaliação Bimestral."
     },
@@ -215,8 +215,8 @@
       "diaSemana": "Sex",
       "dataOrdenacao": "2026-09-11",
       "categoria": "Avaliação",
-      "disciplina": "Geral",
-      "titulo": "",
+      "disciplina": "Inglês",
+      "titulo": "Prova Escrita",
       "descricao": "Avaliação Bimestral."
     },
     {
@@ -225,7 +225,7 @@
       "diaSemana": "Seg",
       "dataOrdenacao": "2026-09-14",
       "categoria": "Avaliação",
-      "disciplina": "Geral",
+      "disciplina": "Matemática",
       "titulo": "",
       "descricao": "Avaliação Bimestral."
     },
@@ -235,7 +235,17 @@
       "diaSemana": "Ter",
       "dataOrdenacao": "2026-09-15",
       "categoria": "Avaliação",
-      "disciplina": "Geral",
+      "disciplina": "História",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-15_geral_avaliacao2",
+      "data": "15/09",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-09-15",
+      "categoria": "Avaliação",
+      "disciplina": "Artes",
       "titulo": "",
       "descricao": "Avaliação Bimestral."
     },
@@ -245,8 +255,18 @@
       "diaSemana": "Qua",
       "dataOrdenacao": "2026-09-16",
       "categoria": "Avaliação",
-      "disciplina": "Geral",
+      "disciplina": "Ciências",
       "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-16_geral_avaliacao2",
+      "data": "16/09",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-09-16",
+      "categoria": "Avaliação",
+      "disciplina": "Inglês",
+      "titulo": "Prova Oral",
       "descricao": "Avaliação Bimestral."
     },
     {
@@ -255,7 +275,17 @@
       "diaSemana": "Qui",
       "dataOrdenacao": "2026-09-17",
       "categoria": "Avaliação",
-      "disciplina": "Geral",
+      "disciplina": "Geografia",
+      "titulo": "",
+      "descricao": "Avaliação Bimestral."
+    },
+    {
+      "id": "2026-09-17_geral_avaliacao2",
+      "data": "17/09",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-09-17",
+      "categoria": "Avaliação",
+      "disciplina": "Educação Física",
       "titulo": "",
       "descricao": "Avaliação Bimestral."
     },
