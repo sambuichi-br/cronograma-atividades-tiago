@@ -304,6 +304,16 @@
       "data": "21/09",
       "diaSemana": "Seg",
       "dataOrdenacao": "2026-09-21",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "",
+      "descricao": "Páginas 94 e 95"
+    },
+    {
+      "id": "2026-09-21_ingles_trabalho_sun",
+      "data": "21/09",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-09-21",
       "categoria": "Trabalho Bimestral",
       "disciplina": "Inglês",
       "titulo": "Art Elements & Sun",
