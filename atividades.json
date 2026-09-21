@@ -300,7 +300,7 @@
       "descricao": "Folclore - brincadeiras antigas.\nHigiene pessoal."
     },
     {
-      "id": "2026-09-21_ingles_trabalho_sun",
+      "id": "2026-09-21_matematica_licao-de-casa-pags-94-95",
       "data": "21/09",
       "diaSemana": "Seg",
       "dataOrdenacao": "2026-09-21",
@@ -338,6 +338,56 @@
       "disciplina": "Geral",
       "titulo": "Recuperação e Substitutivas",
       "descricao": "Horário: 13h às 14h."
+    },
+    {
+      "id": "2026-09-22_lingua-portuguesa_caderno-de-portugues",
+      "data": "22/09",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-09-22",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Ler o texto no caderno de Português, circular os verbos e depois escrevê-los no caderno."
+    },
+    {
+      "id": "2026-09-23_ciencias_trazer-lanterna",
+      "data": "23/09",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-09-23",
+      "categoria": "Lição de Casa",
+      "disciplina": "Ciências",
+      "titulo": "",
+      "descricao": "Trazer uma lanterna de casa."
+    },
+    {
+      "id": "2026-09-25_lingua-portuguesa_licao-de-casa-pags-99-100",
+      "data": "25/09",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-09-25",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Páginas: 99 e 100."
+    },
+    {
+      "id": "2026-09-28_matematica_licao-de-casa-pags-103-104",
+      "data": "28/09",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-09-28",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "",
+      "descricao": "Páginas: 103 e 104."
+    },
+    {
+      "id": "2026-09-28_lingua-portuguesa_folha-volta-as-aulas",
+      "data": "28/09",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-09-28",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Atividade na folha: volta às aulas."
     },
     {
       "id": "2026-09-29_geral_reuniao",
