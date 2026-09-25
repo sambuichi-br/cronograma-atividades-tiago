@@ -390,6 +390,16 @@
       "descricao": "Atividade na folha: volta às aulas."
     },
     {
+      "id": "2026-09-30_lingua-portuguesa_licao-de-casa-pags-109-111",
+      "data": "30/09",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-09-30",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Páginas: 109, 110 e 111."
+    },
+    {
       "id": "2026-09-30_geral_reuniao",
       "data": "30/09",
       "diaSemana": "Qua",
@@ -398,6 +408,36 @@
       "disciplina": "Geral",
       "titulo": "Reunião de Pais e Mestres",
       "descricao": "Horário: 7:30 às 9h (aula somente para os alunos do semi integral e integral)"
+    },
+    {
+      "id": "2026-10-01_matematica_licao-de-casa-pags-108-110",
+      "data": "01/10",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-10-01",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "",
+      "descricao": "Páginas: 108, 109 e 110."
+    },
+    {
+      "id": "2026-10-01_geografia_licao-de-casa-pags-75-76",
+      "data": "01/10",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-10-01",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "",
+      "descricao": "Páginas: 75 e 76."
+    },
+    {
+      "id": "2026-10-05_lingua-portuguesa_folha-volta-as-aulas",
+      "data": "05/10",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-10-05",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "",
+      "descricao": "Atividade na folha: volta às aulas."
     },
     {
       "id": "2026-10-12_geral_aula-suspensa",
