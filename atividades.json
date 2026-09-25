@@ -390,14 +390,14 @@
       "descricao": "Atividade na folha: volta às aulas."
     },
     {
-      "id": "2026-09-29_geral_reuniao",
-      "data": "29/09",
-      "diaSemana": "Ter",
-      "dataOrdenacao": "2026-09-29",
+      "id": "2026-09-30_geral_reuniao",
+      "data": "30/09",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-09-30",
       "categoria": "Reunião",
       "disciplina": "Geral",
       "titulo": "Reunião de Pais e Mestres",
-      "descricao": ""
+      "descricao": "Horário: 7:30 às 9h (aula somente para os alunos do semi integral e integral)"
     },
     {
       "id": "2026-10-12_geral_aula-suspensa",
