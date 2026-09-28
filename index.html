@@ -415,6 +415,12 @@
       text-decoration-color: var(--done-check);
     }
 
+    .item-desc em {
+      font-style: normal;
+      font-weight: bold;
+      color: var(--margin-red);
+    }
+
     .item.row-fade-out {
       opacity: 0;
       max-height: 0;
@@ -519,6 +525,16 @@
       color: var(--ink);
       margin: 0;
       white-space: pre-line;
+    }
+
+    .item-desc a {
+      color: var(--brand);
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .item-desc a:hover {
+      text-decoration: none;
     }
 
     .valor-pill {
@@ -1112,6 +1128,7 @@
         render();
       });
 
+      let allChip = null;
       function makeChip(label, isAll) {
         const el = document.createElement('button');
         el.className = 'chip';
@@ -1120,8 +1137,14 @@
         el.setAttribute('aria-pressed', 'true');
         el.addEventListener('click', () => {
           if (isAll) {
-            state.activeCategories = new Set(categories);
-            [...chipRow.querySelectorAll('.chip')].forEach(c => c.setAttribute('aria-pressed', 'true'));
+            const allSelected = state.activeCategories.size === categories.length;
+            if (allSelected) {
+              state.activeCategories.clear();
+              [...chipRow.querySelectorAll('.chip')].forEach(c => c.setAttribute('aria-pressed', 'false'));
+            } else {
+              state.activeCategories = new Set(categories);
+              [...chipRow.querySelectorAll('.chip')].forEach(c => c.setAttribute('aria-pressed', 'true'));
+            }
           } else {
             if (state.activeCategories.has(label)) {
               state.activeCategories.delete(label);
@@ -1130,12 +1153,16 @@
               state.activeCategories.add(label);
               el.setAttribute('aria-pressed', 'true');
             }
+            if (allChip) {
+              allChip.setAttribute('aria-pressed', state.activeCategories.size === categories.length ? 'true' : 'false');
+            }
           }
           render();
         });
         return el;
       }
-      chipRow.appendChild(makeChip('Todas', true));
+      allChip = makeChip('Todas', true);
+      chipRow.appendChild(allChip);
       categories.forEach(c => chipRow.appendChild(makeChip(c, false)));
 
       document.getElementById('searchInput').addEventListener('input', (e) => {
@@ -1150,6 +1177,13 @@
         return String(str).replace(/[&<>"']/g, s => ({
           '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
         }[s]));
+      }
+
+      function formatDescription(str) {
+        if (!str) return '';
+        return String(str).replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+          return `<a href="${url}" target="_blank" rel="noopener noreferrer">📎 ${text}</a>`;
+        });
       }
 
       function monthLabelFromISO(iso) {
@@ -1245,6 +1279,12 @@
 
           const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
           const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
+          const discHtml = (a.disciplina || '')
+            .split(',')
+            .map(d => d.trim())
+            .filter(Boolean)
+            .map(d => `<span class="tag disc">${escapeHtml(d)}</span>`)
+            .join('');
 
           row.innerHTML = `
         <input type="checkbox" class="check" ${a._done ? 'checked' : ''} aria-label="Marcar como concluída">
@@ -1252,10 +1292,10 @@
         <div class="item-body">
           <div class="badges">
             <span class="tag" style="background:${style.bg}; color:${style.fg};">${escapeHtml(a.categoria)}</span>
-            <span class="tag disc">${escapeHtml(a.disciplina)}</span>
+            ${discHtml}
           </div>
           ${tituloHtml}
-          <p class="item-desc">${escapeHtml(a.descricao)}${valorHtml}</p>
+          <p class="item-desc">${formatDescription(a.descricao)}${valorHtml}</p>
         </div>
       `;
 
@@ -1485,6 +1525,12 @@
 
           const valorHtml = a.valor ? `<span class="valor-pill">(${escapeHtml(a.valor)})</span>` : '';
           const tituloHtml = a.titulo ? `<p class="item-title">${escapeHtml(a.titulo)}</p>` : '';
+          const discHtml = (a.disciplina || '')
+            .split(',')
+            .map(d => d.trim())
+            .filter(Boolean)
+            .map(d => `<span class="tag disc">${escapeHtml(d)}</span>`)
+            .join('');
 
           row.innerHTML = `
         <input type="checkbox" class="check" ${a._done ? 'checked' : ''} aria-label="Marcar como concluída">
@@ -1492,10 +1538,10 @@
         <div class="item-body">
           <div class="badges">
             <span class="tag" style="background:${style.bg}; color:${style.fg};">${escapeHtml(a.categoria)}</span>
-            <span class="tag disc">${escapeHtml(a.disciplina)}</span>
+            ${discHtml}
           </div>
           ${tituloHtml}
-          <p class="item-desc">${escapeHtml(a.descricao)}${valorHtml}</p>
+          <p class="item-desc">${formatDescription(a.descricao)}${valorHtml}</p>
         </div>
       `;
 
