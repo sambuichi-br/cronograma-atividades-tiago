@@ -430,6 +430,26 @@
       "descricao": "Atividade na folha: volta às aulas."
     },
     {
+      "id": "2026-10-07_lingua-portuguesa_licao-de-casa-pags-126-132",
+      "data": "07/10",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-10-07",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "Livro",
+      "descricao": "Páginas: 126, 127, 128 e 132."
+    },
+    {
+      "id": "2026-10-09_matematica_licao-de-casa-pags-124-127",
+      "data": "09/10",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-10-09",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 124, 125, 126 e 127."
+    },
+    {
       "id": "2026-10-12_geral_aula-suspensa",
       "data": "12/10",
       "diaSemana": "Seg",
@@ -438,6 +458,26 @@
       "disciplina": "Geral",
       "titulo": "Dia das Crianças",
       "descricao": ""
+    },
+    {
+      "id": "2026-10-13_historia_pesquisa-com-a-familia",
+      "data": "13/10",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-10-13",
+      "categoria": "Lição de Casa",
+      "disciplina": "História",
+      "titulo": "Pesquisa com a família",
+      "descricao": "Pesquisa com a família.\nPáginas: 53, 55, 56, 57, 58, 59 e 60."
+    },
+    {
+      "id": "2026-10-13_geografia_apostila-de-criatividade-em-acao",
+      "data": "13/10",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-10-13",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "Apostila de Criatividade em Ação",
+      "descricao": "Páginas: 16, 17, 18 e 19."
     },
     {
       "id": "2026-10-19_ciencias-artes_lanterna-do-pequeno-cientista",

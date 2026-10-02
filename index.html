@@ -1192,15 +1192,6 @@
         return MONTH_NAMES[parseInt(m, 10) - 1] + " de " + y;
       }
 
-      function getYesterdayISO() {
-        const d = new Date();
-        d.setDate(d.getDate() - 1);
-        const y = d.getFullYear();
-        const m = String(d.getMonth() + 1).padStart(2, '0');
-        const day = String(d.getDate()).padStart(2, '0');
-        return `${y}-${m}-${day}`;
-      }
-
       function getTodayISO() {
         const d = new Date();
         const y = d.getFullYear();
@@ -1212,9 +1203,6 @@
       function matches(a) {
         if (!state.activeCategories.has(a.categoria)) return false;
         if (state.hideDone && a._done) return false;
-        // Oculta automaticamente as atividades anteriores ao dia atual - 1 (a menos que haja termo de busca)
-        const cutoff = getYesterdayISO();
-        if (!state.query && a.dataOrdenacao && a.dataOrdenacao < cutoff) return false;
         if (!state.query) return true;
         const hay = [a.data, a.categoria, a.disciplina, a.titulo, a.descricao].join(' ').toLowerCase();
         return hay.includes(state.query);
@@ -1240,8 +1228,6 @@
           empty.className = 'sheet';
           const visibleIgnoringDone = activities.filter(a => {
             if (!state.activeCategories.has(a.categoria)) return false;
-            const cutoff = getYesterdayISO();
-            if (!state.query && a.dataOrdenacao && a.dataOrdenacao < cutoff) return false;
             if (!state.query) return true;
             const hay = [a.data, a.categoria, a.disciplina, a.titulo, a.descricao].join(' ').toLowerCase();
             return hay.includes(state.query);
