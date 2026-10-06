@@ -460,6 +460,16 @@
       "descricao": ""
     },
     {
+      "id": "2026-10-13_geral_aula-suspensa",
+      "data": "13/10",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-10-13",
+      "categoria": "Aula Suspensa",
+      "disciplina": "Geral",
+      "titulo": "Dia dos Professores",
+      "descricao": ""
+    },
+    {
       "id": "2026-10-13_historia_pesquisa-com-a-familia",
       "data": "13/10",
       "diaSemana": "Ter",
