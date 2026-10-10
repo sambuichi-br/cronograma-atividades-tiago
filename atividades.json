@@ -490,6 +490,26 @@
       "descricao": "Páginas: 16, 17, 18 e 19."
     },
     {
+      "id": "2026-10-16_matematica_licao-de-casa-pags-133-134",
+      "data": "16/10",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-10-16",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 133 e 134."
+    },
+    {
+      "id": "2026-10-19_lingua-portuguesa_folha-volta-as-aulas",
+      "data": "19/10",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-10-19",
+      "categoria": "Lição de Casa",
+      "disciplina": "Língua Portuguesa",
+      "titulo": "Folha volta às aulas",
+      "descricao": "Atividade na folha: volta às aulas."
+    },
+    {
       "id": "2026-10-19_ciencias-artes_lanterna-do-pequeno-cientista",
       "data": "19/10",
       "diaSemana": "Seg",
