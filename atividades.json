@@ -521,6 +521,46 @@
       "valor": "10,0 pts"
     },
     {
+      "id": "2026-10-20_historia_atividade-em-familia",
+      "data": "20/10",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-10-20",
+      "categoria": "Lição de Casa",
+      "disciplina": "História",
+      "titulo": "Atividade em família",
+      "descricao": "Páginas: 79 e 80."
+    },
+    {
+      "id": "2026-10-21_matematica_licao-de-casa-pags-142-143",
+      "data": "21/10",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-10-21",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 142 e 143."
+    },
+    {
+      "id": "2026-10-23_historia_atividade-em-familia",
+      "data": "23/10",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-10-23",
+      "categoria": "Lição de Casa",
+      "disciplina": "História",
+      "titulo": "Atividade em família",
+      "descricao": "Páginas: 85 e 86."
+    },
+    {
+      "id": "2026-10-23_geral_aniversario-alice",
+      "data": "23/10",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-10-23",
+      "categoria": "Evento Escolar",
+      "disciplina": "Geral",
+      "titulo": "Aniversário da Alice (8 anos)",
+      "descricao": "Comemoração na escola no horário do lanche."
+    },
+    {
       "id": "2026-10-24_geral_evento-escolar",
       "data": "24/10",
       "diaSemana": "Sáb",
@@ -529,6 +569,16 @@
       "disciplina": "Geral",
       "titulo": "Sábado Letivo - Feira STEAM (4º ano - Feira do Empreendedorismo)",
       "descricao": ""
+    },
+    {
+      "id": "2026-10-27_matematica_licao-de-casa-pags-150-156",
+      "data": "27/10",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-10-27",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 150, 151, 152, 153, 154, 155 e 156."
     },
     {
       "id": "2026-10-30_geral_passeio",
