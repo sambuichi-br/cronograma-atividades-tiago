@@ -601,6 +601,17 @@
       "descricao": ""
     },
     {
+      "id": "2026-11-05_educacao-fisica_atividades-avaliativas",
+      "data": "05/11",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-11-05",
+      "categoria": "Trabalho Bimestral",
+      "disciplina": "Educação Física",
+      "titulo": "Atividades Avaliativas de Educação Física",
+      "descricao": "Entregar 2 atividades avaliativas na Pasta Catálogo (dentro dos plásticos).",
+      "valor": "2,0 pts"
+    },
+    {
       "id": "2026-11-12_geral-ingles_culto-mensal",
       "data": "12/11",
       "diaSemana": "Qui",

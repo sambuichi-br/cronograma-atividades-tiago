@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materiais 2027 – 3º ano e Jardim 2</title>
+<style>
+  :root {
+    --azul: #0d4a7c;
+    --azul-escuro: #0a3558;
+    --amarelo: #f2b01e;
+    --amarelo-claro: #fff4d6;
+    --fundo: #f6f7f9;
+    --papel: #ffffff;
+    --linha: #dde2e8;
+    --texto: #1c2733;
+    --suave: #5d6b7a;
+    --ok: #2e7d4f;
+    --ok-fundo: #e6f3ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --azul: #7fb6e8;
+      --azul-escuro: #0f2a44;
+      --amarelo: #f2b01e;
+      --amarelo-claro: #3a2f12;
+      --fundo: #12171d;
+      --papel: #1b222a;
+      --linha: #2e3945;
+      --texto: #e8edf2;
+      --suave: #98a6b5;
+      --ok: #6fd09a;
+      --ok-fundo: #173325;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.4;
+  }
+  header {
+    background: var(--azul-escuro);
+    color: #fff;
+    padding: 18px 16px 14px;
+    border-bottom: 4px solid var(--amarelo);
+  }
+  header h1 { margin: 0; font-size: 1.25rem; font-weight: 700; }
+  header p { margin: 4px 0 0; font-size: .85rem; opacity: .85; }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  .topo { position: sticky; top: 0; z-index: 5; background: var(--fundo); padding: 10px 16px 8px; border-bottom: 1px solid var(--linha); }
+  .progresso { display: flex; align-items: center; gap: 10px; font-size: .85rem; color: var(--suave); }
+  .barra { flex: 1; height: 8px; background: var(--linha); border-radius: 4px; overflow: hidden; }
+  .barra > div { height: 100%; width: 0; background: var(--ok); transition: width .25s; }
+  .abas { display: flex; gap: 6px; margin-top: 10px; }
+  .abas button {
+    flex: 1; padding: 9px 4px; font: inherit; font-size: .85rem; font-weight: 600;
+    border: 1px solid var(--linha); background: var(--papel); color: var(--texto);
+    border-radius: 8px; cursor: pointer;
+  }
+  .abas button small { display: block; font-weight: 400; color: var(--suave); font-size: .72rem; }
+  .abas button[aria-selected="true"] { background: var(--azul-escuro); color: #fff; border-color: var(--azul-escuro); }
+  .abas button[aria-selected="true"] small { color: #cfe0f0; }
+  .ferramentas { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 16px 0; font-size: .85rem; }
+  .ferramentas label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .ferramentas button { font: inherit; font-size: .8rem; color: var(--suave); background: none; border: 1px solid var(--linha); border-radius: 6px; padding: 6px 10px; cursor: pointer; }
+  .aviso { margin: 10px 16px 0; padding: 10px 12px; background: var(--amarelo-claro); border-left: 4px solid var(--amarelo); border-radius: 4px; font-size: .82rem; }
+  .aviso[hidden] { display: none; }
+  .legenda { padding: 8px 16px 0; font-size: .78rem; color: var(--suave); }
+  .legenda b { color: var(--texto); }
+  ul.lista { list-style: none; margin: 10px 0 0; padding: 0 12px 40px; }
+  li.item { background: var(--papel); border: 1px solid var(--linha); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+  li.item.diferente { border-left: 4px solid var(--amarelo); }
+  li.item.pronto { background: var(--ok-fundo); }
+  li.item[hidden] { display: none; }
+  .nome { font-weight: 600; font-size: .95rem; }
+  .nota { font-size: .8rem; color: var(--suave); margin-top: 1px; }
+  .escolhas { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .escolha {
+    flex: 1 1 130px; display: flex; align-items: center; gap: 10px;
+    border: 1px solid var(--linha); border-radius: 8px; padding: 8px 10px; cursor: pointer; min-height: 44px;
+  }
+  .escolha:has(input:checked) { background: var(--ok-fundo); border-color: var(--ok); }
+  .escolha:has(input:focus-visible) { outline: 3px solid var(--amarelo); outline-offset: 1px; }
+  .escolha input { width: 22px; height: 22px; accent-color: var(--ok); flex: none; }
+  .escolha .quem { font-size: .78rem; color: var(--suave); display: block; }
+  .escolha .qtd { font-weight: 700; font-size: 1rem; }
+  .escolha:has(input:checked) .qtd { text-decoration: line-through; opacity: .7; }
+  li.item.unico { display: flex; align-items: center; gap: 12px; cursor: pointer; min-height: 56px; }
+  li.item.unico input { width: 24px; height: 24px; accent-color: var(--ok); flex: none; }
+  li.item.unico:has(input:focus-visible) { outline: 3px solid var(--amarelo); }
+  li.item.unico .corpo { flex: 1; }
+  li.item.unico .qtd { font-weight: 700; background: var(--fundo); border: 1px solid var(--linha); border-radius: 6px; padding: 2px 8px; font-size: .9rem; white-space: nowrap; }
+  li.item.pronto .nome { text-decoration: line-through; opacity: .7; }
+  .vazio { text-align: center; color: var(--suave); padding: 30px 16px; font-size: .9rem; }
+  footer { text-align: center; font-size: .75rem; color: var(--suave); padding: 0 16px 30px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Materiais escolares 2027</h1>
+    <p>Escola Modelo Cristão · entrega em 26/01/2027, das 7h30 às 10h (entrada pela 1ª IBL)</p>
+  </div>
+</header>
+
+<div class="topo">
+  <div class="wrap">
+    <div class="progresso">
+      <span id="txtProgresso">0 de 0 comprados</span>
+      <div class="barra"><div id="barra"></div></div>
+    </div>
+    <div class="abas" role="tablist" id="abas"></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="aviso" id="avisoStorage" hidden>
+    Este modo de visualização não permite guardar as marcações. Baixe o arquivo e abra no navegador do celular ou do computador para que fiquem salvas.
+  </div>
+  <div class="ferramentas">
+    <label><input type="checkbox" id="ocultar"> Esconder comprados</label>
+    <button id="limpar" type="button">Limpar marcações</button>
+  </div>
+  <div class="legenda" id="legenda"></div>
+  <ul class="lista" id="lista"></ul>
+  <div class="vazio" id="vazio" hidden>Tudo comprado nesta aba.</div>
+</main>
+<footer>As marcações ficam salvas neste navegador.</footer>
+
+<script>
+// ---------- Dados ----------
+// [item, observação, qtd 3º ano, qtd Jardim 2]
+const comuns = [
+  ["Mochila grande", "Jd2: de rodinhas", "1", "1"],
+  ["Bíblia", "3º: Bíblia das Descobertas NTLH (SBB) · Jd2: Bíblia ilustrada infantil", "1", "1"],
+  ["Garrafa squeeze identificada", "", "1", "1"],
+  ["Boné", "Manter na mochila", "1", "1"],
+  ["Lancheira com toalhinha", "", "1", "1"],
+  ["Necessaire (escova, pasta e toalhinha)", "", "1", "1"],
+  ["Caixa de lenço de papel", "", "1", "2"],
+  ["Pasta maleta A4 com alça, azul ou amarela", "3º: 2 cm · Jd2: 4,5 cm, polionda", "1", "1"],
+  ["Cadernos", "3º: 2 de 96 folhas + 1 de 48, capa dura · Jd2: 1 caderno de linguagem, brochura, capa dura, 48 folhas", "3", "1"],
+  ["Caderno de cartografia e desenho, capa dura, 96 folhas", "", "1", "1"],
+  ["Estojo", "3º: 1 de 2 divisórias + 1 de 1 divisória · Jd2: 1 de 3 divisórias", "2", "1"],
+  ["Lápis grafite", "Jd2: triangular", "4", "4"],
+  ["Apontador", "3º: com depósito", "1", "1"],
+  ["Borracha macia e grande", "", "2", "1"],
+  ["Jogo", "3º: Jenga, Dama, Ludo, Cara-cara, Tetris ou Stop (escolher 1) · Jd2: jogo de alfabetização à parte, veja a aba do Jd2", "1", "1"],
+  ["Envelopes ofício brancos", "No Jd2 a lista traz esse item duas vezes (4 + 4). Confirmar com a escola", "4", "4"],
+  ["EVA cor lisa", "3º: amarelo · Jd2: vermelho", "3", "3"],
+  ["EVA glitter", "3º: amarelo · Jd2: vermelho", "3", "3"],
+  ["Pacote de bexigas nº 9", "3º: amarela · Jd2: laranja", "1", "1"],
+  ["TNT preto", "", "2 m", "2 m"],
+  ["Sacos plásticos com 4 furos", "", "10", "10"],
+  ["Pacote de sulfite, 500 folhas", "", "1", "1"],
+  ["Pacote de sulfite colorido, 100 folhas", "3º: rosa · Jd2: verde", "1", "1"],
+  ["Coleção Ecocores, 21 cores, 110 g, 42 folhas", "3º: A4 · Jd2: A3", "1", "1"],
+  ["Bloco Canson A3, 20 folhas", "", "1", "1"],
+  ["Bloco Canson A4, 20 folhas", "", "1", "1"],
+  ["Pacote de toalha tipo Perfex", "", "2", "2"],
+  ["Avental plástico azul", "", "1", "1"],
+  ["Jogo de caneta hidrocor, 12 cores", "Jd2: ponta fina", "1", "1"],
+  ["Caixa de lápis de cor", "3º: 24 cores · Jd2: 12 cores, triangular", "1", "1"],
+  ["Caixa de giz de cera, 12 cores", "", "1", "1"],
+  ["Tesoura sem ponta", "", "1", "1"],
+  ["Cola bastão 40 g", "", "2", "2"],
+  ["Cola líquida 110 g", "", "1", "1"],
+  ["Caixa de tinta guache", "3º: 12 cores · Jd2: 6 cores", "1", "1"],
+  ["Pincel de pintura", "3º: nº 10 e nº 12 · Jd2: nº 10 e nº 14", "3", "2"],
+  ["Massa de modelar argila, 500 g", "", "1", "1"],
+  ["Massa de modelar", "3º: 250 g · Jd2: 500 g (um pote por semestre)", "1", "1"],
+  ["Pacote de massa de EVA, 10 cores", "", "1", "1"]
+];
+
+const so3 = [
+  ["Mini agenda escolar", "", "1"],
+  ["Dicionário da língua portuguesa", "Aurélio, Michaelis ou Houaiss", "1"],
+  ["Dicionário de língua inglesa", "Michaelis, inglês/português", "1"],
+  ["Bloco de ficha pautada 5x8", "", "1"],
+  ["Régua 20 cm", "", "1"],
+  ["Marca-texto amarelo", "", "1"],
+  ["Kit cola colorida, tons pastel, 6 cores", "", "1"],
+  ["Pote de tinta guache 250 g, amarelo", "", "1"],
+  ["Fita dupla face 12 mm x 30 m", "", "1"],
+  ["Fita adesiva transparente 19 mm x 50 m", "", "1"],
+  ["Bastões de cola quente, fina", "", "5"],
+  ["Velcro adesivo 15 mm, macho e fêmea", "", "1 m"],
+  ["Palito de sorvete", "", "1"]
+];
+
+const soJ2 = [
+  ["Pacote de lenço umedecido", "", "1"],
+  ["Caixa polionda com tampa 285x175", "Azul ou amarela", "1"],
+  ["Jogo de alfabetização", "", "1"],
+  ["Jogo de matemática", "Adequado à faixa etária", "1"],
+  ["Quebra-cabeça de 50 peças", "", "1"],
+  ["Livrinho infantil", "Adequado à faixa etária", "1"],
+  ["Foto do aluno atual 10x15", "", "1"],
+  ["Kit olhos móveis 6 mm", "", "1"],
+  ["Fita crepe 48 mm x 50 m", "", "1"],
+  ["Tinta plástica", "", "1"],
+  ["Pacote de cotonete", "", "1"],
+  ["Potinho de glitter", "Cor de sua preferência", "1"],
+  ["Potinho de lantejoula", "Cor de sua preferência", "1"],
+  ["Pacote de palito de churrasco, 50 unidades", "", "1"],
+  ["Bloco de papel criativo A4, 8 cores, 32 folhas", "", "1"],
+  ["Cartela de botões grandes", "", "1"],
+  ["Pacote de pregador de roupa de madeira, grande", "", "1"],
+  ["Pacote de penas", "", "1"],
+  ["Plástico leitoso", "", "1"],
+  ["Pacote de prato de papelão", "", "1"],
+  ["Fita de cetim", "", "1"],
+  ["Kit forma de brigadeiro", "", "1"],
+  ["Brinquedo Lig Lig", "", "1"]
+];
+
+// ---------- Armazenamento ----------
+const CHAVE = "materiais2027_v1";
+let persistente = true;
+let estado = {};
+try {
+  estado = JSON.parse(localStorage.getItem(CHAVE) || "{}") || {};
+} catch (e) {
+  persistente = false;
+  estado = {};
+}
+function salvar() {
+  try {
+    localStorage.setItem(CHAVE, JSON.stringify(estado));
+  } catch (e) {
+    persistente = false;
+    document.getElementById("avisoStorage").hidden = false;
+  }
+}
+if (!persistente) document.getElementById("avisoStorage").hidden = false;
+
+// ---------- Abas ----------
+const abas = [
+  { id: "comuns", titulo: "Nas duas", total: () => comuns.length * 2 },
+  { id: "so3", titulo: "Só 3º ano", total: () => so3.length },
+  { id: "soJ2", titulo: "Só Jardim 2", total: () => soJ2.length }
+];
+let abaAtual = "comuns";
+try { abaAtual = sessionStorage.getItem("aba2027") || "comuns"; } catch (e) {}
+
+const elLista = document.getElementById("lista");
+const elAbas = document.getElementById("abas");
+const elOcultar = document.getElementById("ocultar");
+
+function contar(prefixo) {
+  return Object.keys(estado).filter(k => estado[k] && k.startsWith(prefixo)).length;
+}
+
+function desenharAbas() {
+  elAbas.innerHTML = "";
+  abas.forEach(a => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", a.id === abaAtual);
+    const feitos = contar(a.id + ":");
+    b.innerHTML = a.titulo + "<small>" + feitos + " de " + a.total() + "</small>";
+    b.onclick = () => {
+      abaAtual = a.id;
+      try { sessionStorage.setItem("aba2027", abaAtual); } catch (e) {}
+      desenhar();
+    };
+    elAbas.appendChild(b);
+  });
+}
+
+function atualizarProgresso() {
+  const total = abas.reduce((s, a) => s + a.total(), 0);
+  const feitos = Object.keys(estado).filter(k => estado[k]).length;
+  document.getElementById("txtProgresso").textContent = feitos + " de " + total + " comprados";
+  document.getElementById("barra").style.width = (total ? (feitos / total) * 100 : 0) + "%";
+}
+
+function marcar(chave, valor) {
+  if (valor) estado[chave] = 1; else delete estado[chave];
+  salvar();
+}
+
+function criarComum(d, i) {
+  const [nome, nota, q3, qj] = d;
+  const diff = q3 !== qj;
+  const li = document.createElement("li");
+  li.className = "item" + (diff ? " diferente" : "");
+  li.innerHTML =
+    '<div class="nome"></div>' +
+    (nota ? '<div class="nota"></div>' : "") +
+    '<div class="escolhas"></div>';
+  li.querySelector(".nome").textContent = nome;
+  if (nota) li.querySelector(".nota").textContent = nota;
+  const box = li.querySelector(".escolhas");
+  [["3º ano", q3, "comuns:" + i + ":3"], ["Jardim 2", qj, "comuns:" + i + ":j"]].forEach(([quem, q, chave]) => {
+    const lb = document.createElement("label");
+    lb.className = "escolha";
+    lb.innerHTML = '<input type="checkbox"><span><span class="quem"></span><span class="qtd"></span></span>';
+    lb.querySelector(".quem").textContent = quem;
+    lb.querySelector(".qtd").textContent = q;
+    const cb = lb.querySelector("input");
+    cb.checked = !!estado[chave];
+    cb.setAttribute("aria-label", nome + ", " + quem + ", quantidade " + q);
+    cb.onchange = () => {
+      marcar(chave, cb.checked);
+      li.classList.toggle("pronto", todosMarcados(li));
+      aplicarOcultar(li);
+      desenharAbas(); atualizarProgresso();
+    };
+    box.appendChild(lb);
+  });
+  li.classList.toggle("pronto", todosMarcados(li));
+  return li;
+}
+
+function criarUnico(d, i, prefixo) {
+  const [nome, nota, q] = d;
+  const chave = prefixo + ":" + i;
+  const li = document.createElement("li");
+  li.className = "item unico";
+  li.innerHTML = '<input type="checkbox"><div class="corpo"><div class="nome"></div>' +
+    (nota ? '<div class="nota"></div>' : "") + '</div><span class="qtd"></span>';
+  li.querySelector(".nome").textContent = nome;
+  if (nota) li.querySelector(".nota").textContent = nota;
+  li.querySelector(".qtd").textContent = q;
+  const cb = li.querySelector("input");
+  cb.checked = !!estado[chave];
+  cb.setAttribute("aria-label", nome + ", quantidade " + q);
+  li.classList.toggle("pronto", cb.checked);
+  li.onclick = (ev) => {
+    if (ev.target !== cb) { cb.checked = !cb.checked; }
+    marcar(chave, cb.checked);
+    li.classList.toggle("pronto", cb.checked);
+    aplicarOcultar(li);
+    desenharAbas(); atualizarProgresso();
+  };
+  return li;
+}
+
+function todosMarcados(li) {
+  const cbs = li.querySelectorAll("input[type=checkbox]");
+  return Array.from(cbs).every(c => c.checked);
+}
+
+function aplicarOcultar(li) {
+  li.hidden = elOcultar.checked && li.classList.contains("pronto");
+  verificarVazio();
+}
+
+function verificarVazio() {
+  const visiveis = elLista.querySelectorAll("li.item:not([hidden])").length;
+  document.getElementById("vazio").hidden = visiveis > 0;
+}
+
+function desenhar() {
+  desenharAbas();
+  elLista.innerHTML = "";
+  const leg = document.getElementById("legenda");
+  if (abaAtual === "comuns") {
+    leg.innerHTML = 'Itens da lista dos dois anos. Marque um quadro por criança. <b>Barra amarela</b> = quantidade diferente entre as listas.';
+    comuns.forEach((d, i) => elLista.appendChild(criarComum(d, i)));
+  } else if (abaAtual === "so3") {
+    leg.textContent = "Itens que aparecem apenas na lista do 3º ano.";
+    so3.forEach((d, i) => elLista.appendChild(criarUnico(d, i, "so3")));
+  } else {
+    leg.textContent = "Itens que aparecem apenas na lista do Jardim 2.";
+    soJ2.forEach((d, i) => elLista.appendChild(criarUnico(d, i, "soJ2")));
+  }
+  elLista.querySelectorAll("li.item").forEach(aplicarOcultar);
+  atualizarProgresso();
+}
+
+elOcultar.onchange = () => {
+  elLista.querySelectorAll("li.item").forEach(aplicarOcultar);
+};
+
+document.getElementById("limpar").onclick = () => {
+  if (confirm("Apagar todas as marcações de compra?")) {
+    estado = {};
+    salvar();
+    desenhar();
+  }
+};
+
+desenhar();
+</script>
+</body>
+</html>
