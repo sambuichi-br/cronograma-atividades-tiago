@@ -581,6 +581,46 @@
       "descricao": "Páginas: 150, 151, 152, 153, 154, 155 e 156."
     },
     {
+      "id": "2026-10-28_geografia_licao-de-casa-pags-85-86",
+      "data": "28/10",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-10-28",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "Livro",
+      "descricao": "Páginas: 85 e 86."
+    },
+    {
+      "id": "2026-10-29_historia_atividade-em-familia",
+      "data": "29/10",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-10-29",
+      "categoria": "Lição de Casa",
+      "disciplina": "História",
+      "titulo": "Atividade em família",
+      "descricao": "Páginas: 91 e 92."
+    },
+    {
+      "id": "2026-10-29_matematica_licao-de-casa-pags-142-143",
+      "data": "29/10",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-10-29",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 142 e 143."
+    },
+    {
+      "id": "2026-10-29_geografia_atividade-em-familia",
+      "data": "29/10",
+      "diaSemana": "Qui",
+      "dataOrdenacao": "2026-10-29",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "Atividade em família",
+      "descricao": "Páginas: 90."
+    },
+    {
       "id": "2026-10-30_geral_passeio",
       "data": "30/10",
       "diaSemana": "Sex",
@@ -599,6 +639,16 @@
       "disciplina": "Geral",
       "titulo": "Feriado de Finados",
       "descricao": ""
+    },
+    {
+      "id": "2026-11-04_geografia_geoquest",
+      "data": "04/11",
+      "diaSemana": "Qua",
+      "dataOrdenacao": "2026-11-04",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "Geoquest",
+      "descricao": "Páginas: 94."
     },
     {
       "id": "2026-11-05_educacao-fisica_atividades-avaliativas",
