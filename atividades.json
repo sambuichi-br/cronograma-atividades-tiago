@@ -641,16 +641,6 @@
       "descricao": ""
     },
     {
-      "id": "2026-11-04_geografia_geoquest",
-      "data": "04/11",
-      "diaSemana": "Qua",
-      "dataOrdenacao": "2026-11-04",
-      "categoria": "Lição de Casa",
-      "disciplina": "Geografia",
-      "titulo": "Geoquest",
-      "descricao": "Páginas: 94."
-    },
-    {
       "id": "2026-11-05_educacao-fisica_atividades-avaliativas",
       "data": "05/11",
       "diaSemana": "Qui",
@@ -660,6 +650,26 @@
       "titulo": "Atividades Avaliativas de Educação Física",
       "descricao": "Entregar 2 atividades avaliativas na Pasta Catálogo (dentro dos plásticos).",
       "valor": "2,0 pts"
+    },
+    {
+      "id": "2026-11-06_geografia_geoquest",
+      "data": "06/11",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-11-06",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "Geoquest",
+      "descricao": "Páginas: 94."
+    },
+    {
+      "id": "2026-11-06_matematica-pags-176-178",
+      "data": "06/11",
+      "diaSemana": "Sex",
+      "dataOrdenacao": "2026-11-06",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 176 a 178."
     },
     {
       "id": "2026-11-12_geral-ingles_culto-mensal",
