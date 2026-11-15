@@ -712,6 +712,16 @@
       "descricao": "Dirigido pelo 2º ano + Inglês"
     },
     {
+      "id": "2026-11-17_geografia-pags-107-108",
+      "data": "17/11",
+      "diaSemana": "Ter",
+      "dataOrdenacao": "2026-11-17",
+      "categoria": "Lição de Casa",
+      "disciplina": "Geografia",
+      "titulo": "Livro",
+      "descricao": "Páginas: 107 e 108."
+    },
+    {
       "id": "2026-11-20_geral_aula-suspensa",
       "data": "20/11",
       "diaSemana": "Sex",
@@ -720,6 +730,16 @@
       "disciplina": "Geral",
       "titulo": "Feriado Consciência Negra",
       "descricao": ""
+    },
+    {
+      "id": "2026-11-23_matematica-pags-209-210",
+      "data": "23/11",
+      "diaSemana": "Seg",
+      "dataOrdenacao": "2026-11-23",
+      "categoria": "Lição de Casa",
+      "disciplina": "Matemática",
+      "titulo": "Livro",
+      "descricao": "Páginas: 209 e 210."
     },
     {
       "id": "2026-11-23_geral_avaliacao",
